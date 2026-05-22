@@ -1,0 +1,18 @@
+{
+  "name": "kivex-icons",
+  "version": "1.0.0",
+  "description": "A pixel-perfect, dynamic, and open-source icon library package for web and javascript applications.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node scripts/build",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MotionMind2007/Kivex"
+  },
+  "keywords":  ["icons", "svg", "motion-icons", "vanilla-js", "javascript", "web-components", "kivex", "kivex-icons", "open-source", "icon-library", "dynamic-icons", "pixel-perfect-icons"],
+  "author": "MotionMind2007",
+  "license": "MIT",
+  "type": "module"
+}

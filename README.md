@@ -1,35 +1,35 @@
 <p align="center">
-  <img src="assets/motion-icons-logo.png" alt="Motion Icons Logo" width="150"/>
+  <img src="assets/kivex-logo.png" alt="Kivex Logo" width="150"/>
 </p>
 
-# Motion Icons
+# Kivex Icons
 
-Motion Icons is an open-source icon library that provides lightweight, pixel-perfect, and dynamic SVG icons for modern web applications.
+Kivex Icons is an open-source icon library that provides lightweight, pixel-perfect, and dynamic SVG icons for modern web applications.
 
 ## Packages
 
 | Package | Version | Links |
 | ------- | ------- | ----- |
-| motion-icons (Core JS) | 1.0.2 | coming soon |
-| motion-icons-react-native | coming soon | coming soon |
+| Kivex (Core JS) | 1.0.0 | coming soon |
+| kivex-react-native | coming soon | coming soon |
 
 ## Development
 To contribute or test locally, follow these steps:
 - Clone the repository.
 - Link the core package:
 ```sh
-cd packages/motion-icons
+cd packages/kivex
 ```
 ```bash
 npm link
 ```
 - Use it in your project:
 ```sh
-npm link motion-icons
+npm link kivex
 ```
 
 ## Contributing
 For more info on how to contribute please see the contribution guidelines.
 
 ## License
-Motion Icons is free for personal use and is licensed under the [MIT License](LICENSE) License.
+Kivex Icons is free for personal use and is licensed under the [MIT License](LICENSE).

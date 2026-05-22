@@ -1,4 +1,4 @@
-// Core entry point for motion-icons
+// Core entry point for Kivex
 import iconsData from './icons.js';
 
 const toSvg = (contents, attrs = {}) => {
