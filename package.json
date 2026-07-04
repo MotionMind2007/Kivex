@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/MotionMind2007/Kivex/issues"
   },
-  "homepage": "https://github.com/MotionMind2007/Kivex#readme"
+  "homepage": "https://github.com/MotionMind2007/Kivex#readme",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
 }
