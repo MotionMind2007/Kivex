@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/MotionMind2007/Kivex"
   },
-  "keywords":  ["icons", "svg", "motion-icons", "vanilla-js", "javascript", "web-components", "kivex", "kivex-icons", "open-source", "icon-library", "dynamic-icons", "pixel-perfect-icons"],
+  "keywords":  ["icons", "svg", "motion-icons", "vanilla-js", "javascript", "kivex", "kivex-icons", "open-source", "icon-library", "dynamic-icons"],
   "author": "MotionMind2007",
   "license": "MIT",
   "type": "module"

@@ -1,0 +1,54 @@
+{
+    "name": "kivex-react",
+    "version": "1.0.1",
+    "description": "Kivex icon library for React applications.",
+    "license": "MIT",
+    "keywords":  ["icons", "svg", "motion-icons", "vanilla-js", "kivex", "kivex-icons", "react-kivex", "kivex-react", "open-source-icons", "icon-library", "dynamic-icons", "pixel-perfect-icons"],
+    "author": "MotionMind2007",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MotionMind2007/Kivex"
+    },
+    "bugs": {
+        "url": "https://github.com/MotionMind2007/Kivex/issues"
+    },
+    "homepage": "https://github.com/MotionMind2007/Kivex#readme",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        }
+    },
+    "sideEffects": false,
+    "peerDependencies": {
+        "react": "^19.2.7"
+    },
+    "scripts": {
+        "generate": "tsx scripts/build.ts",
+        "watch": "tsx scripts/watch.ts",
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "test": "vitest run"
+    },
+    "devDependencies": {
+        "@svgr/core": "^8.1.0",
+        "@svgr/plugin-jsx": "^8.1.0",
+        "@svgr/plugin-svgo": "^8.1.0",
+        "@types/fs-extra": "^11.0.4",
+        "@types/react": "^19.2.17",
+        "fast-glob": "^3.3.3",
+        "fs-extra": "^11.3.6",
+        "prettier": "^3.9.4",
+        "tsup": "^8.5.1",
+        "tsx": "^4.22.5",
+        "typescript": "^6.0.3",
+        "vitest": "^4.1.9"
+    }
+}
