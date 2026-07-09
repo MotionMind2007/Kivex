@@ -53,6 +53,54 @@ var Alert = react.forwardRef(
   }
 );
 Alert.displayName = "Alert";
+var BarChart = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M3 3v17a1 1 0 0 0 1 1h17" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M7 6h4" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M7 11h12" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M7 16h8" })
+        ]
+      }
+    );
+  }
+);
+BarChart.displayName = "BarChart";
+var BellRing = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M5.778 9.588C5.778 5.95 8.564 3 12 3s6.222 2.95 6.222 6.588v3.817c0 .585.129 1.161.376 1.684l1.027 2.175c.247.523.375 1.1.375 1.684V19H4v-.052c0-.585.129-1.161.375-1.684l1.027-2.175c.247-.523.376-1.1.376-1.684z" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M10 22h4" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M2 8c.167-.833.5-3.5 3-6" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M19 2c.833.833 2.6 3.2 3 6" })
+        ]
+      }
+    );
+  }
+);
+BellRing.displayName = "BellRing";
 var Bookmark = react.forwardRef(
   ({
     size = 24,
@@ -114,7 +162,7 @@ var Cheak = react.forwardRef(
   }
 );
 Cheak.displayName = "Cheak";
-var Close = react.forwardRef(
+var ColumnChartPlainIncreasing = react.forwardRef(
   ({
     size = 24,
     color = "currentColor",
@@ -128,14 +176,58 @@ var Close = react.forwardRef(
         color,
         strokeWidth,
         children: [
-          /* @__PURE__ */ jsxRuntime.jsx("rect", { width: 14, height: 2, x: 7.757, y: 6.343, rx: 1, transform: "rotate(45 7.757 6.343)" }),
-          /* @__PURE__ */ jsxRuntime.jsx("rect", { width: 2, height: 14, x: 16.243, y: 6.343, rx: 1, transform: "rotate(45 16.243 6.343)" })
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M5 21v-6" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M19 3v18" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M12 21V9" })
         ]
       }
     );
   }
 );
-Close.displayName = "Close";
+ColumnChartPlainIncreasing.displayName = "ColumnChartPlainIncreasing";
+var ColumnChart = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M3 3v17a1 1 0 0 0 1 1h17" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M8 17v-4" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M13 5v12" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M18 17V9" })
+        ]
+      }
+    );
+  }
+);
+ColumnChart.displayName = "ColumnChart";
+var CreditCard = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsx(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M2 10v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7M2 10V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3M2 10h20" })
+      }
+    );
+  }
+);
+CreditCard.displayName = "CreditCard";
 var Download = react.forwardRef(
   ({
     size = 24,
@@ -181,6 +273,54 @@ var DraftBook = react.forwardRef(
   }
 );
 DraftBook.displayName = "DraftBook";
+var EyeClosed = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M21 8c0 3.314-4.03 6-9 6s-9-2.686-9-6" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "m5 12-3 3" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "m19 12 3 3" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "m9 14-1 4" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "m14 14 1 4" })
+        ]
+      }
+    );
+  }
+);
+EyeClosed.displayName = "EyeClosed";
+var Eye = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("circle", { cx: 12, cy: 12, r: 3 }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M2 12C5 6.718 13.2-.678 22 12" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M22.008 12.023c-3 5.282-11.2 12.678-20 0" })
+        ]
+      }
+    );
+  }
+);
+Eye.displayName = "Eye";
 var File = react.forwardRef(
   ({
     size = 24,
@@ -216,12 +356,34 @@ var Folder = react.forwardRef(
         size,
         color,
         strokeWidth,
-        children: /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M3 7a2 2 0 0 1 2-2h2.4a2 2 0 0 1 1.6.8l1.05 1.4a2 2 0 0 0 1.6.8H19a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" })
+        children: /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M3 7a2 2 0 0 1 2-2h2.4a2 2 0 0 1 1.6.8l1.05 1.4a2 2 0 0 0 1.6.8H19a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" })
       }
     );
   }
 );
 Folder.displayName = "Folder";
+var Heart = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("g", { clipPath: "url(#a)", children: /* @__PURE__ */ jsxRuntime.jsx("path", { d: "m11.958 7.692-1.183-1.27C7.639 3.053 2 5.272 2 9.874c0 1.451.623 2.834 1.71 3.795l8.098 7.16a.29.29 0 0 0 .384 0l8.097-7.16A5.07 5.07 0 0 0 22 9.875c0-4.602-5.639-6.82-8.775-3.454l-1.183 1.27a.06.06 0 0 1-.084 0Z" }) }),
+          /* @__PURE__ */ jsxRuntime.jsx("defs", { children: /* @__PURE__ */ jsxRuntime.jsx("clipPath", { id: "a", children: /* @__PURE__ */ jsxRuntime.jsx("rect", { width: 24, height: 24 }) }) })
+        ]
+      }
+    );
+  }
+);
+Heart.displayName = "Heart";
 var Home = react.forwardRef(
   ({
     size = 24,
@@ -244,6 +406,30 @@ var Home = react.forwardRef(
   }
 );
 Home.displayName = "Home";
+var LayoutDashboard = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("rect", { width: 7, height: 9, x: 3, y: 3, rx: 0.5 }),
+          /* @__PURE__ */ jsxRuntime.jsx("rect", { width: 7, height: 9, x: 14, y: 12, rx: 0.5 }),
+          /* @__PURE__ */ jsxRuntime.jsx("rect", { width: 7, height: 5, x: 3, y: 16, rx: 0.5 }),
+          /* @__PURE__ */ jsxRuntime.jsx("rect", { width: 7, height: 5, x: 14, y: 3, rx: 0.5 })
+        ]
+      }
+    );
+  }
+);
+LayoutDashboard.displayName = "LayoutDashboard";
 var MenuVertical = react.forwardRef(
   ({
     size = 24,
@@ -281,15 +467,34 @@ var Menu = react.forwardRef(
         color,
         strokeWidth,
         children: [
-          /* @__PURE__ */ jsxRuntime.jsx("rect", { width: 16, height: 2, x: 4, y: 5, rx: 1 }),
-          /* @__PURE__ */ jsxRuntime.jsx("rect", { width: 16, height: 2, x: 4, y: 11, rx: 1 }),
-          /* @__PURE__ */ jsxRuntime.jsx("rect", { width: 16, height: 2, x: 4, y: 17, rx: 1 })
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M4 5h15" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M4 12h15" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M4 19h15" })
         ]
       }
     );
   }
 );
 Menu.displayName = "Menu";
+var Moon = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsx(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M12 21c4.567 0 7.917-3.376 8.819-7.802.125-.616-.406-1.142-1.034-1.117-8.525.34-8.443-4.734-7.975-7.918.09-.611-.375-1.167-.988-1.087A9.002 9.002 0 0 0 12 21Z" })
+      }
+    );
+  }
+);
+Moon.displayName = "Moon";
 var Notification = react.forwardRef(
   ({
     size = 24,
@@ -312,6 +517,25 @@ var Notification = react.forwardRef(
   }
 );
 Notification.displayName = "Notification";
+var Paperclip = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsx(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M10 6.21v9.58a2 2 0 0 0 4 0V6a4 4 0 0 0-8 0v10a6 6 0 0 0 12 0V6.21" })
+      }
+    );
+  }
+);
+Paperclip.displayName = "Paperclip";
 var PenLine = react.forwardRef(
   ({
     size = 24,
@@ -337,6 +561,28 @@ var PenLine = react.forwardRef(
   }
 );
 PenLine.displayName = "PenLine";
+var PieChart = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M21.996 13.107Q22 12.954 22 12.8C22 6.835 17.165 2 11.2 2q-.154 0-.307.004c-.51.014-.893.448-.893.957V13a1 1 0 0 0 1 1h10.039c.51 0 .942-.384.957-.893Z" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M20 17.632A9.82 9.82 0 0 1 11.827 22C6.4 22 2 17.6 2 12.173A9.82 9.82 0 0 1 6.368 4" })
+        ]
+      }
+    );
+  }
+);
+PieChart.displayName = "PieChart";
 var Plus = react.forwardRef(
   ({
     size = 24,
@@ -387,19 +633,44 @@ var Send = react.forwardRef(
     color = "currentColor",
     strokeWidth = 2
   }, ref) => {
-    return /* @__PURE__ */ jsxRuntime.jsx(
+    return /* @__PURE__ */ jsxRuntime.jsxs(
       IconBase,
       {
         ref,
         size,
         color,
         strokeWidth,
-        children: /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M1.116 3.858c-.3-1.214.932-2.24 2.072-1.726l18.915 8.523c1.179.531 1.179 2.205 0 2.736L3.189 21.914c-1.14.513-2.37-.512-2.072-1.727l2.012-8.164zm3.826 9.165-1.64 6.645 14.749-6.645zm0-2h13.109L3.303 4.377z" })
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M21.693 12.478 2.778 21.002a.5.5 0 0 1-.69-.576l2.042-8.284a.5.5 0 0 0 0-.24L2.087 3.619a.5.5 0 0 1 .691-.575l18.915 8.523a.5.5 0 0 1 0 .912Z" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M4.16 12.022h17.386" })
+        ]
       }
     );
   }
 );
 Send.displayName = "Send";
+var SettingsControl = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M10 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm0 0h9" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M14 17a3 3 0 1 0 6 0 3 3 0 0 0-6 0Zm0 0H5" })
+        ]
+      }
+    );
+  }
+);
+SettingsControl.displayName = "SettingsControl";
 var Settings = react.forwardRef(
   ({
     size = 24,
@@ -422,6 +693,167 @@ var Settings = react.forwardRef(
   }
 );
 Settings.displayName = "Settings";
+var ShieldCheck = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M4 5.256a.23.23 0 0 1 .227-.229c2.45-.018 4.83-.82 6.791-2.29l.808-.606a.29.29 0 0 1 .348 0l.808.605a11.45 11.45 0 0 0 6.79 2.291.23.23 0 0 1 .228.229v6.712a10.29 10.29 0 0 1-7.977 10.027.1.1 0 0 1-.046 0A10.29 10.29 0 0 1 4 11.968V5.256Z" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "m9 12 1.741 1.625a.5.5 0 0 0 .737-.06L15 9" })
+        ]
+      }
+    );
+  }
+);
+ShieldCheck.displayName = "ShieldCheck";
+var ShoppingBag = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "m21 6-2.7-3.6a1 1 0 0 0-.8-.4h-11a1 1 0 0 0-.8.4L3 6v15a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1zM3 6h18" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M16 10a4 4 0 0 1-8 0" })
+        ]
+      }
+    );
+  }
+);
+ShoppingBag.displayName = "ShoppingBag";
+var SlidersHorizontal = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M3 5h7" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M14 5V3m0 2v2m0-2h7" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M8 12v-2m0 2v2m0-2H3" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M12 12h9" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M3 19h9" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M16 19v-2m0 2v2m0-2h5" })
+        ]
+      }
+    );
+  }
+);
+SlidersHorizontal.displayName = "SlidersHorizontal";
+var SlidersVertical = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M5 3v7" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M5 14v7m0-7H3m2 0h2" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M12 8h2m-2 0h-2m2 0V3" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M12 12v9" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M19 3v9" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M19 16h2m-2 0h-2m2 0v5" })
+        ]
+      }
+    );
+  }
+);
+SlidersVertical.displayName = "SlidersVertical";
+var Trash2 = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M3 6h2m0 0h3M5 6v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6m2 0h-2m0 0h-3M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M8 6h8" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M10 11v6" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M14 11v6" })
+        ]
+      }
+    );
+  }
+);
+Trash2.displayName = "Trash2";
+var Trash = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsx(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M3 6h2m16 0h-2M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M8 6h8M8 6H5m11 0h3M5 6v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6" })
+      }
+    );
+  }
+);
+Trash.displayName = "Trash";
+var UserCheck = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("circle", { cx: 10, cy: 8, r: 5 }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M15 14.755A8 8 0 0 0 2 21" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "m16 19.333 1.608 1.34a.5.5 0 0 0 .71-.071L22 16" })
+        ]
+      }
+    );
+  }
+);
+UserCheck.displayName = "UserCheck";
 var User = react.forwardRef(
   ({
     size = 24,
@@ -468,26 +900,68 @@ var Users = react.forwardRef(
   }
 );
 Users.displayName = "Users";
+var X = react.forwardRef(
+  ({
+    size = 24,
+    color = "currentColor",
+    strokeWidth = 2
+  }, ref) => {
+    return /* @__PURE__ */ jsxRuntime.jsxs(
+      IconBase,
+      {
+        ref,
+        size,
+        color,
+        strokeWidth,
+        children: [
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "m6 6 12 12" }),
+          /* @__PURE__ */ jsxRuntime.jsx("path", { d: "M18 6 6 18" })
+        ]
+      }
+    );
+  }
+);
+X.displayName = "X";
 
 exports.Alert = Alert;
+exports.BarChart = BarChart;
+exports.BellRing = BellRing;
 exports.Bookmark = Bookmark;
 exports.Chat = Chat;
 exports.Cheak = Cheak;
-exports.Close = Close;
+exports.ColumnChart = ColumnChart;
+exports.ColumnChartPlainIncreasing = ColumnChartPlainIncreasing;
+exports.CreditCard = CreditCard;
 exports.Download = Download;
 exports.DraftBook = DraftBook;
+exports.Eye = Eye;
+exports.EyeClosed = EyeClosed;
 exports.File = File;
 exports.Folder = Folder;
+exports.Heart = Heart;
 exports.Home = Home;
+exports.LayoutDashboard = LayoutDashboard;
 exports.Menu = Menu;
 exports.MenuVertical = MenuVertical;
+exports.Moon = Moon;
 exports.Notification = Notification;
+exports.Paperclip = Paperclip;
 exports.PenLine = PenLine;
+exports.PieChart = PieChart;
 exports.Plus = Plus;
 exports.Search = Search;
 exports.Send = Send;
 exports.Settings = Settings;
+exports.SettingsControl = SettingsControl;
+exports.ShieldCheck = ShieldCheck;
+exports.ShoppingBag = ShoppingBag;
+exports.SlidersHorizontal = SlidersHorizontal;
+exports.SlidersVertical = SlidersVertical;
+exports.Trash = Trash;
+exports.Trash2 = Trash2;
 exports.User = User;
+exports.UserCheck = UserCheck;
 exports.Users = Users;
+exports.X = X;
 //# sourceMappingURL=index.js.map
 //# sourceMappingURL=index.js.map

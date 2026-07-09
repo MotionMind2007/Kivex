@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-    import { IconBase } from '../components/IconBase';
-    import type { IconProps } from '../types/IconProps';
+import { IconBase } from '../components/IconBase';
+import type { IconProps } from '../types/IconProps';
 
 export const Notification = forwardRef<SVGSVGElement, IconProps>(
   (

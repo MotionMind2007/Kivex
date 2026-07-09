@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-    import { IconBase } from '../components/IconBase';
-    import type { IconProps } from '../types/IconProps';
+import { IconBase } from '../components/IconBase';
+import type { IconProps } from '../types/IconProps';
 
 export const Menu = forwardRef<SVGSVGElement, IconProps>(
   (
@@ -20,7 +20,7 @@ export const Menu = forwardRef<SVGSVGElement, IconProps>(
         color={color}
         strokeWidth={strokeWidth}
       >
-        <rect width={16} height={2} x={4} y={5} rx={1} /><rect width={16} height={2} x={4} y={11} rx={1} /><rect width={16} height={2} x={4} y={17} rx={1} />
+        <path d="M4 5h15" /><path d="M4 12h15" /><path d="M4 19h15" />
       </IconBase>
     );
   }

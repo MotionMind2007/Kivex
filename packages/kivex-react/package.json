@@ -35,7 +35,8 @@
         "watch": "tsx scripts/watch.ts",
         "build": "tsup",
         "dev": "tsup --watch",
-        "test": "vitest run"
+        "test": "vitest run",
+        "prepublishOnly": "npm run build"
     },
     "devDependencies": {
         "@svgr/core": "^8.1.0",

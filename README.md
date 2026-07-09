@@ -10,9 +10,8 @@ Kivex(Kinetic Vector Exchange) Icons is an open-source icon library that provide
 
 | Package | Version | NPM Link | LibPilot link |
 | ------- | ------- | ----- | ----- |
-| **Kivex-icons** (Core JS) | [![npm](https://img.shields.io/npm/v/kivex-icons?color=blue)](https://npmjs.com/package/kivex-icons) | https://npmjs.com/package/kivex-icons | https://libpilot.motionmind.me/package/kivex-icons |
-| kivex-react | [![npm](https://img.shields.io/npm/v/kivex-react?color=blue)](https://npmjs.com/package/kivex-react) | https://npmjs.com/package/kivex-react | https://libpilot.motionmind.me/package/kivex-react |
-| kivex-react-native | coming soon | coming soon | coming soon |
+| **Kivex-icons** (Core JS) | [![npm](https://img.shields.io/npm/v/kivex-icons?color=blue)](https://npmjs.com/package/kivex-icons) | [NPM](https://npmjs.com/package/kivex-icons) | [LibPlot](https://libpilot.motionmind.me/package/kivex-icons) |
+| kivex-react | [![npm](https://img.shields.io/npm/v/kivex-react?color=blue)](https://npmjs.com/package/kivex-react) | [NPM](https://npmjs.com/package/kivex-react) | [LibPilot](https://libpilot.motionmind.me/package/kivex-react) |
 
 
 ## Credits & Contributors
