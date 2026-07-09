@@ -1,5 +1,29 @@
-## Kivex Icon
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+<p align="center">
+  <a href="https://github.com/motionmind2007/Kivex">
+    <img src="https://raw.githubusercontent.com/MotionMind2007/Kivex/main/assets/kivex-logo.png" alt="Kivex Logo" width="150"/>
+  </a>
+</p>
+
+<p align="center">
+  <strong>kivex-icons</strong><br>
+  A pixel-perfect open-source SVG icon library for JavaScript.
+</p>
+
+<div align="center">
+
+  [![npm](https://img.shields.io/npm/v/kivex-icons?color=blue)](https://www.npmjs.com/package/kivex-icons)
+  ![NPM Downloads](https://img.shields.io/npm/dw/kivex-icons)
+  [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/motionmind2007/Kivex/blob/main/LICENSE)
+
+</div>
+
+<p align="center">
+  <a href="https://github.com/motionmind2007/Kivex">Main Repo</a>
+  ·
+  <a href="https://github.com/motionmind2007/Kivex/blob/main/LICENSE">License</a>
+</p>
+
+## kivex-icons
 
 A lightweight, pixel-perfect, and dynamic icon library for web developers.
 
@@ -11,6 +35,15 @@ A lightweight, pixel-perfect, and dynamic icon library for web developers.
 ## Quick Start
 ```sh
 npm install kivex-icons
+```
+```sh
+pnpm add kivex-icons
+```
+```sh
+yarn add kivex-icons
+```
+```sh
+bun add kivex-icons
 ```
 
 ## Usage
@@ -42,7 +75,7 @@ Drop `<i>` placeholder tags in your HTML with data-kivex attributes, and let Kiv
 ```
 
 3. Server-Side Rendering & String Generation (Node.js / Express / SSR)
-Need a raw HTML string instead of a DOM element? Use getKivexIconString which works flawlessly in environment without a browser window object (No document is not defined errors!).
+Need a raw HTML string instead of a DOM element? Use getKivexIconString which works flawlessly in environments without a browser window object (No document is not defined errors!).
 ```js
 import { Menu, getKivexIconString } from 'kivex-icons';
 
@@ -58,7 +91,7 @@ If you prefer not to use a package manager, you can include Kivex Icons directly
 <i data-kivex="home" data-size="40" color="red"></i>
 
 <script type="module">
-    import { buildKivexIcon, replaceKivexIcons, Home } from 'https://cdn.jsdelivr.net/npm/kivex-icons/src/index.js';
+    import { buildKivexIcon, replaceKivexIcons, Home } from 'https://cdn.jsdelivr.net/npm/kivex-icons/dist/index.mjs';
 
     // Method 1: Append Child
     const homeIcon = buildKivexIcon(Home, { size: 32 });

@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/motionmind20007/Kivex">
+  <a href="https://github.com/motionmind2007/Kivex">
     <img src="https://raw.githubusercontent.com/MotionMind2007/Kivex/main/assets/kivex-logo.png" alt="Kivex Logo" width="150"/>
   </a>
 </p>
@@ -33,6 +33,9 @@ Implementation of the lightweight, pixel-perfect, and dynamic Kivex icon library
 npm install kivex-react
 ```
 ```sh
+yarn add kivex-react
+```
+```sh
 pnpm add kivex-react
 ```
 ```sh
@@ -53,10 +56,10 @@ function App() {
       <Home/>
 
       {/* Styled with props */}
-      <Search color="#3b82f6" size="{32}" strokeWidth="{2.5}"/>
+      <Search color="#3b82f6" size={32} strokeWidth={2.5}/>
       
       {/* Target custom CSS classes */}
-      <Settings className="icon-spin" size="{24}"/>
+      <Settings className="icon-spin" size={24}/>
     </div>
   );
 }
@@ -68,4 +71,4 @@ export default App;
 For full documentation, architecture design, and core guidelines, please visit our main repository at [Kivex System Root](https://github.com/motionmind2007/kivex).
 
 ## License
-react-kivex is licensed under the MIT license. See [LICENSE](LICENSE).
+kivex-react is licensed under the MIT license. See [LICENSE](LICENSE).
