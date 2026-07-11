@@ -16,11 +16,21 @@ Kivex(Kinetic Vector Exchange) Icons is an open-source icon library that provide
 
 ## Credits & Contributors
 
-Kivex Icons is authored and maintained by **[MD SAIFUL ALOM SIAM](https://github.com/MotionMind2007)**.
+### Project Creator
 
-Special thanks to the following contributors for their specific ecosystem contributions:
+**[MD SAIFUL ALOM SIAM](https://github.com/MotionMind2007)**
 
-- **[JOSEPH NICHOLAS ABURU](https://github.com/Joseph4sure)** — Contributed to the initial structure of the `kivex-react` package wrapper.
+- Creator and maintainer of Kivex.
+- Designed and handcrafted the complete **Kivex SVG icon library**.
+- Created the `kivex-icons` core package and established the project's architecture, tooling, and documentation.
+
+### Contributors
+
+| Contributor | Contributions |
+| ------------ | ------------- |
+| **[JOSEPH NICHOLAS ABURU](https://github.com/Joseph4sure)** | Authored the initial framework wrapper packages for Kivex, including `kivex-react` and `kivex-solid`. |
+
+As the Kivex ecosystem grows, contributors will be recognized here for their contributions.
 
 ## License
 Kivex Icons is free for personal use and is licensed under the [MIT License](LICENSE).
