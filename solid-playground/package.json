@@ -1,0 +1,23 @@
+{
+  "name": "solid-playground",
+  "version": "0.0.0",
+  "description": "Playground for testing kivex-solid icons",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf node_modules/.vite"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "solid-devtools": "^0.34.3",
+    "typescript": "^5.7.2",
+    "vite": "^7.1.4",
+    "vite-plugin-solid": "^2.11.8"
+  },
+  "dependencies": {
+    "solid-js": "^1.9.5",
+    "kivex-solid": "file:../packages/kivex-solid"
+  }
+}
