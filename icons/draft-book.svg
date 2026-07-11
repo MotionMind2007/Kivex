@@ -1,4 +1,14 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 18V20C4 21.1046 4.89543 22 6 22H13.1429H17.7143H19.8571M4 18H13.1429H17.7143H19.8571M4 18V4C4 2.89543 4.89543 2 6 2H18C19.1046 2 20 2.89543 20 4V17.8571C20 17.936 19.936 18 19.8571 18M20 22H19.8571M19.8571 18L19.2808 18.5379C18.4337 19.3286 18.4337 20.6714 19.2808 21.4621L19.8571 22" stroke="black" stroke-width="2" stroke-linecap="round"/>
-<path d="M9.6 14H12M14.4 14H12M12 14V6M12 6H8.5C8.22386 6 8 6.22386 8 6.5V7.77778M12 6H15.5C15.7761 6 16 6.22386 16 6.5V7.77778" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 18v2a2 2 0 0 0 2 2h13.857M4 18h15.857M4 18V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.857a.143.143 0 0 1-.143.143M20 22h-.143m0-4-.576.538a2 2 0 0 0 0 2.924l.576.538" />
+  <path d="M9.6 14H12m2.4 0H12m0 0V6m0 0H8.5a.5.5 0 0 0-.5.5v1.278M12 6h3.5a.5.5 0 0 1 .5.5v1.278" />
 </svg>

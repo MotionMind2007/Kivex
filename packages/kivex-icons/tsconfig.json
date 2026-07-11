@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "ignoreDeprecations": "6.0",
+        "baseUrl": ".",
+        "target": "ES2022",
+        "jsx": "react-jsx",
+        "strict": true,
+        "moduleResolution": "bundler",
+        "declaration": true,
+        "declarationMap": true,
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+        "skipDefaultLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+    }
+}

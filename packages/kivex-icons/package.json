@@ -1,18 +1,35 @@
 {
   "name": "kivex-icons",
-  "version": "1.0.0",
-  "description": "A pixel-perfect, dynamic, and open-source icon library package for web and javascript applications.",
-  "main": "src/index.js",
+  "version": "1.1.0",
+  "description": "A pixel-perfect open-source SVG icon library for JavaScript.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
   "scripts": {
-    "build": "node scripts/build",
-    "prepublishOnly": "npm run build"
+    "generate": "tsx scripts/build.ts",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run generate && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MotionMind2007/Kivex"
+    "url": "git+https://github.com/MotionMind2007/Kivex.git"
   },
-  "keywords":  ["icons", "svg", "motion-icons", "vanilla-js", "javascript", "web-components", "kivex", "kivex-icons", "open-source", "icon-library", "dynamic-icons", "pixel-perfect-icons"],
+  "keywords":  ["motion-icons", "javascript", "typescript", "kivex", "kivex-icons", "open-source", "icon-library", "dynamic-icons", "icon", "ui"],
   "author": "MotionMind2007",
   "license": "MIT",
-  "type": "module"
+  "publishConfig": {
+    "access": "public"
+  }
 }

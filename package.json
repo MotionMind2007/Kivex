@@ -4,7 +4,7 @@
   "description": "<p align=\"center\">\r   <img src=\"assets/motion-icons-logo.png\" alt=\"Motion Icons Logo\" width=\"150\"/>\r </p>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "polished-svg": "tsx scripts/process-svg.ts"
   },
   "repository": {
     "type": "git",
@@ -14,13 +14,19 @@
     "packages/*"
   ],
   "author": "MotionMind2007",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/MotionMind2007/Kivex/issues"
   },
   "homepage": "https://github.com/MotionMind2007/Kivex#readme",
   "devDependencies": {
-    "typescript": "^5.9.2"
+    "fast-glob": "^3.3.3",
+    "fs-extra": "^11.3.6",
+    "prettier": "^3.9.4",
+    "svgo": "^4.0.1",
+    "svgson": "^5.3.1",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.0"
   }
 }
