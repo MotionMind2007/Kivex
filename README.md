@@ -12,7 +12,8 @@ Kivex(Kinetic Vector Exchange) Icons is an open-source icon library that provide
 | ------- | ------- | ----- | ----- |
 | **Kivex-icons** (Core JS) | [![npm](https://img.shields.io/npm/v/kivex-icons?color=blue)](https://npmjs.com/package/kivex-icons) | [NPM](https://npmjs.com/package/kivex-icons) | [LibPlot](https://libpilot.motionmind.me/package/kivex-icons) |
 | kivex-react | [![npm](https://img.shields.io/npm/v/kivex-react?color=blue)](https://npmjs.com/package/kivex-react) | [NPM](https://npmjs.com/package/kivex-react) | [LibPilot](https://libpilot.motionmind.me/package/kivex-react) |
-
+| kivex-solid | [![npm](https://img.shields.io/npm/v/kivex-solid?color=blue)](https://npmjs.com/package/kivex-solid) | [NPM](https://npmjs.com/package/kivex-solid) | [LibPilot](https://libpilot.motionmind.me/package/kivex-solid) |
+| kivex-levelo | [![npm](https://img.shields.io/npm/v/kivex-levelo?color=blue)](https://npmjs.com/package/kivex-levelo) | [NPM](https://npmjs.com/package/kivex-levelo) | [LibPilot](https://libpilot.motionmind.me/package/kivex-levelo) |
 
 ## Credits & Contributors
 
@@ -22,7 +23,7 @@ Kivex(Kinetic Vector Exchange) Icons is an open-source icon library that provide
 
 - Creator and maintainer of Kivex.
 - Designed and handcrafted the complete **Kivex SVG icon library**.
-- Created the `kivex-icons` core package and established the project's architecture, tooling, and documentation.
+- Developed the `kivex-icons` (core engine) & `kivex-levelo` packages, and architected the project's entire build tooling, automation, and documentation.
 
 ### Contributors
 
