@@ -1,5 +1,5 @@
 import { createComponent as e, createRenderEffect as t, mergeProps as n, sharedConfig as r, splitProps as i, untrack as a } from "solid-js";
-//#region ../../node_modules/solid-js/web/dist/web.js
+//#region ../../node_modules/.pnpm/solid-js@1.9.14/node_modules/solid-js/web/dist/web.js
 var o = /*#__PURE__*/ new Set([
 	"className",
 	"value",
@@ -194,20 +194,20 @@ function te(e, t = window.document) {
 	let n = t[p] || (t[p] = /* @__PURE__ */ new Set());
 	for (let r = 0, i = e.length; r < i; r++) {
 		let i = e[r];
-		n.has(i) || (n.add(i), t.addEventListener(i, ue));
+		n.has(i) || (n.add(i), t.addEventListener(i, pe));
 	}
 }
 function h(e, t, n) {
-	y(e) || (n == null ? e.removeAttribute(t) : e.setAttribute(t, n));
+	v(e) || (n == null ? e.removeAttribute(t) : e.setAttribute(t, n));
 }
 function ne(e, t, n, r) {
-	y(e) || (r == null ? e.removeAttributeNS(t, n) : e.setAttributeNS(t, n, r));
+	v(e) || (r == null ? e.removeAttributeNS(t, n) : e.setAttributeNS(t, n, r));
 }
 function re(e, t, n) {
-	y(e) || (n ? e.setAttribute(t, "") : e.removeAttribute(t));
+	v(e) || (n ? e.setAttribute(t, "") : e.removeAttribute(t));
 }
 function ie(e, t) {
-	y(e) || (t == null ? e.removeAttribute("class") : e.className = t);
+	v(e) || (t == null ? e.removeAttribute("class") : e.className = t);
 }
 function ae(e, t, n, r) {
 	if (r) Array.isArray(n) ? (e[`$$${t}`] = n[0], e[`$$${t}Data`] = n[1]) : e[`$$${t}`] = n;
@@ -220,15 +220,15 @@ function oe(e, t, n = {}) {
 	let r = Object.keys(t || {}), i = Object.keys(n), a, o;
 	for (a = 0, o = i.length; a < o; a++) {
 		let r = i[a];
-		!r || r === "undefined" || t[r] || (b(e, r, !1), delete n[r]);
+		!r || r === "undefined" || t[r] || (de(e, r, !1), delete n[r]);
 	}
 	for (a = 0, o = r.length; a < o; a++) {
 		let i = r[a], o = !!t[i];
-		!i || i === "undefined" || n[i] === o || !o || (b(e, i, !0), n[i] = o);
+		!i || i === "undefined" || n[i] === o || !o || (de(e, i, !0), n[i] = o);
 	}
 	return n;
 }
-function g(e, t, n) {
+function se(e, t, n) {
 	if (!t) return n ? h(e, "style") : t;
 	let r = e.style;
 	if (typeof t == "string") return r.cssText = t;
@@ -238,45 +238,45 @@ function g(e, t, n) {
 	for (a in t) i = t[a], i !== n[a] && (r.setProperty(a, i), n[a] = i);
 	return n;
 }
-function _(e, n = {}, r, i) {
+function g(e, n = {}, r, i) {
 	let a = {};
-	return i || t(() => a.children = S(e, n.children, a.children)), t(() => typeof n.ref == "function" && v(n.ref, e)), t(() => ce(e, n, r, !0, a, !0)), a;
+	return i || t(() => a.children = y(e, n.children, a.children)), t(() => typeof n.ref == "function" && _(n.ref, e)), t(() => le(e, n, r, !0, a, !0)), a;
 }
-function v(e, t, n) {
+function _(e, t, n) {
 	return a(() => e(t, n));
 }
-function se(e, n, r, i) {
-	if (r !== void 0 && !i && (i = []), typeof n != "function") return S(e, n, i, r);
-	t((t) => S(e, n(), t, r), i);
+function ce(e, n, r, i) {
+	if (r !== void 0 && !i && (i = []), typeof n != "function") return y(e, n, i, r);
+	t((t) => y(e, n(), t, r), i);
 }
-function ce(e, t, n, r, i = {}, a = !1) {
+function le(e, t, n, r, i = {}, a = !1) {
 	t ||= {};
 	for (let r in i) if (!(r in t)) {
 		if (r === "children") continue;
-		i[r] = x(e, r, null, i[r], n, a, t);
+		i[r] = fe(e, r, null, i[r], n, a, t);
 	}
 	for (let o in t) {
 		if (o === "children") {
-			r || S(e, t.children);
+			r || y(e, t.children);
 			continue;
 		}
 		let s = t[o];
-		i[o] = x(e, o, s, i[o], n, a, t);
+		i[o] = fe(e, o, s, i[o], n, a, t);
 	}
 }
-function y(e) {
+function v(e) {
 	return !!r.context && !r.done && (!e || e.isConnected);
 }
-function le(e) {
+function ue(e) {
 	return e.toLowerCase().replace(/-([a-z])/g, (e, t) => t.toUpperCase());
 }
-function b(e, t, n) {
+function de(e, t, n) {
 	let r = t.trim().split(/\s+/);
 	for (let t = 0, i = r.length; t < i; t++) e.classList.toggle(r[t], n);
 }
-function x(e, t, n, r, i, a, l) {
-	let f, p, m, _, v;
-	if (t === "style") return g(e, n, r);
+function fe(e, t, n, r, i, a, l) {
+	let f, p, m, g, _;
+	if (t === "style") return se(e, n, r);
 	if (t === "classList") return oe(e, n, r);
 	if (n === r) return r;
 	if (t === "ref") a || n(e);
@@ -295,17 +295,17 @@ function x(e, t, n, r, i, a, l) {
 		(a || n) && (ae(e, i, n, a), a && te([i]));
 	} else if (t.slice(0, 5) === "attr:") h(e, t.slice(5), n);
 	else if (t.slice(0, 5) === "bool:") re(e, t.slice(5), n);
-	else if ((v = t.slice(0, 5) === "prop:") || (m = s.has(t)) || !i && ((_ = u(t, e.tagName)) || (p = o.has(t))) || (f = e.nodeName.includes("-") || "is" in l)) {
-		if (v) t = t.slice(5), p = !0;
-		else if (y(e)) return n;
-		t === "class" || t === "className" ? ie(e, n) : f && !p && !m ? e[le(t)] = n : e[_ || t] = n;
+	else if ((_ = t.slice(0, 5) === "prop:") || (m = s.has(t)) || !i && ((g = u(t, e.tagName)) || (p = o.has(t))) || (f = e.nodeName.includes("-") || "is" in l)) {
+		if (_) t = t.slice(5), p = !0;
+		else if (v(e)) return n;
+		t === "class" || t === "className" ? ie(e, n) : f && !p && !m ? e[ue(t)] = n : e[g || t] = n;
 	} else {
 		let r = i && t.indexOf(":") > -1 && ee[t.split(":")[0]];
 		r ? ne(e, r, t, n) : h(e, c[t] || t, n);
 	}
 	return n;
 }
-function ue(e) {
+function pe(e) {
 	if (r.registry && r.events && r.events.find(([t, n]) => n === e)) return;
 	let t = e.target, n = `$$${e.type}`, i = e.target, a = e.currentTarget, o = (t) => Object.defineProperty(e, "target", {
 		configurable: !0,
@@ -338,8 +338,8 @@ function ue(e) {
 	} else c();
 	o(i);
 }
-function S(e, n, r, i, a) {
-	let o = y(e);
+function y(e, n, r, i, a) {
+	let o = v(e);
 	if (o) {
 		!r && (r = [...e.childNodes]);
 		let t = [];
@@ -356,19 +356,19 @@ function S(e, n, r, i, a) {
 		if (o || s === "number" && (n = n.toString(), n === r)) return r;
 		if (c) {
 			let t = r[0];
-			t && t.nodeType === 3 ? t.data !== n && (t.data = n) : t = document.createTextNode(n), r = T(e, r, i, t);
+			t && t.nodeType === 3 ? t.data !== n && (t.data = n) : t = document.createTextNode(n), r = x(e, r, i, t);
 		} else r = r !== "" && typeof r == "string" ? e.firstChild.data = n : e.textContent = n;
 	} else if (n == null || s === "boolean") {
 		if (o) return r;
-		r = T(e, r, i);
+		r = x(e, r, i);
 	} else if (s === "function") return t(() => {
 		let t = n();
 		for (; typeof t == "function";) t = t();
-		r = S(e, t, r, i);
+		r = y(e, t, r, i);
 	}), () => r;
 	else if (Array.isArray(n)) {
 		let s = [], l = r && Array.isArray(r);
-		if (C(s, n, r, a)) return t(() => r = S(e, s, r, i, !0)), () => r;
+		if (b(s, n, r, a)) return t(() => r = y(e, s, r, i, !0)), () => r;
 		if (o) {
 			if (!s.length) return r;
 			if (i === void 0) return r = [...e.childNodes];
@@ -379,28 +379,28 @@ function S(e, n, r, i, a) {
 			return r = n;
 		}
 		if (s.length === 0) {
-			if (r = T(e, r, i), c) return r;
-		} else l ? r.length === 0 ? w(e, s, i) : f(e, r, s) : (r && T(e), w(e, s));
+			if (r = x(e, r, i), c) return r;
+		} else l ? r.length === 0 ? me(e, s, i) : f(e, r, s) : (r && x(e), me(e, s));
 		r = s;
 	} else if (n.nodeType) {
 		if (o && n.parentNode) return r = c ? [n] : n;
 		if (Array.isArray(r)) {
-			if (c) return r = T(e, r, i, n);
-			T(e, r, null, n);
+			if (c) return r = x(e, r, i, n);
+			x(e, r, null, n);
 		} else r == null || r === "" || !e.firstChild ? e.appendChild(n) : e.replaceChild(n, e.firstChild);
 		r = n;
 	}
 	return r;
 }
-function C(e, t, n, r) {
+function b(e, t, n, r) {
 	let i = !1;
 	for (let a = 0, o = t.length; a < o; a++) {
 		let o = t[a], s = n && n[e.length], c;
 		if (!(o == null || o === !0 || o === !1)) if ((c = typeof o) == "object" && o.nodeType) e.push(o);
-		else if (Array.isArray(o)) i = C(e, o, s) || i;
+		else if (Array.isArray(o)) i = b(e, o, s) || i;
 		else if (c === "function") if (r) {
 			for (; typeof o == "function";) o = o();
-			i = C(e, Array.isArray(o) ? o : [o], Array.isArray(s) ? s : [s]) || i;
+			i = b(e, Array.isArray(o) ? o : [o], Array.isArray(s) ? s : [s]) || i;
 		} else e.push(o), i = !0;
 		else {
 			let t = String(o);
@@ -409,10 +409,10 @@ function C(e, t, n, r) {
 	}
 	return i;
 }
-function w(e, t, n = null) {
+function me(e, t, n = null) {
 	for (let r = 0, i = t.length; r < i; r++) e.insertBefore(t[r], n);
 }
-function T(e, t, n, r) {
+function x(e, t, n, r) {
 	if (n === void 0) return e.textContent = "";
 	let i = r || document.createTextNode("");
 	if (t.length) {
@@ -429,8 +429,8 @@ function T(e, t, n, r) {
 }
 //#endregion
 //#region src/components/IconBase.tsx
-var de = /*#__PURE__*/ m("<svg xmlns=http://www.w3.org/2000/svg viewBox=\"0 0 24 24\"fill=none stroke-linecap=round stroke-linejoin=round>");
-function E(e) {
+var he = /*#__PURE__*/ m("<svg xmlns=http://www.w3.org/2000/svg viewBox=\"0 0 24 24\"fill=none stroke-linecap=round stroke-linejoin=round>");
+function S(e) {
 	let [t, r] = i(e, [
 		"size",
 		"color",
@@ -439,8 +439,8 @@ function E(e) {
 		"ref"
 	]);
 	return (() => {
-		var e = de(), i = t.ref;
-		return typeof i == "function" ? v(i, e) : t.ref = e, _(e, n({
+		var e = he(), i = t.ref;
+		return typeof i == "function" ? _(i, e) : t.ref = e, g(e, n({
 			get width() {
 				return t.size ?? 24;
 			},
@@ -453,34 +453,15 @@ function E(e) {
 			get "stroke-width"() {
 				return t.strokeWidth ?? 2;
 			}
-		}, r), !0, !0), se(e, () => t.children), e;
+		}, r), !0, !0), ce(e, () => t.children), e;
 	})();
 }
-E.displayName = "IconBase";
+S.displayName = "IconBase";
 //#endregion
-//#region src/icons/bookmark.tsx
-var fe = /*#__PURE__*/ m("<svg><path d=\"M6 4h12v16l-6-5.5l-6 5.5z\"></svg>", !1, !0, !1);
-function D(t) {
-	return e(E, n({
-		get size() {
-			return t.size ?? 24;
-		},
-		get color() {
-			return t.color ?? "currentColor";
-		},
-		get strokeWidth() {
-			return t.strokeWidth ?? 2;
-		}
-	}, t, { get children() {
-		return fe();
-	} }));
-}
-D.displayName = "Bookmark";
-//#endregion
-//#region src/icons/chat.tsx
-var pe = /*#__PURE__*/ m("<svg><path d=\"M2 6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V15.3043C22 16.4089 21.1046 17.3043 20 17.3043H12H7.65891C7.23095 17.3043 6.81428 17.4416 6.47012 17.696L2.7972 20.4108C2.46715 20.6547 2 20.4191 2 20.0087V6Z\"></svg>", !1, !0, !1), me = /*#__PURE__*/ m("<svg><path d=\"M6 8L17 8\"></svg>", !1, !0, !1), he = /*#__PURE__*/ m("<svg><path d=\"M6 13H15\"></svg>", !1, !0, !1);
-function O(t) {
-	return e(E, n({
+//#region src/icons/alert.tsx
+var ge = /*#__PURE__*/ m("<svg><circle cx=12 cy=12 r=10></svg>", !1, !0, !1), _e = /*#__PURE__*/ m("<svg><path d=\"M12 8v5\"></svg>", !1, !0, !1), ve = /*#__PURE__*/ m("<svg><circle cx=12 cy=16 r=0.5></svg>", !1, !0, !1);
+function C(t) {
+	return e(S, n({
 		get size() {
 			return t.size ?? 24;
 		},
@@ -492,37 +473,18 @@ function O(t) {
 		}
 	}, t, { get children() {
 		return [
-			pe(),
-			me(),
-			he()
+			ge(),
+			_e(),
+			ve()
 		];
 	} }));
 }
-O.displayName = "Chat";
+C.displayName = "Alert";
 //#endregion
-//#region src/icons/close.tsx
-var ge = /*#__PURE__*/ m("<svg><rect x=7.75736 y=6.34314 width=14 height=2 rx=1 transform=\"rotate(45 7.75736 6.34314)\"></svg>", !1, !0, !1), _e = /*#__PURE__*/ m("<svg><rect x=16.2426 y=6.34314 width=2 height=14 rx=1 transform=\"rotate(45 16.2426 6.34314)\"></svg>", !1, !0, !1);
-function k(t) {
-	return e(E, n({
-		get size() {
-			return t.size ?? 24;
-		},
-		get color() {
-			return t.color ?? "currentColor";
-		},
-		get strokeWidth() {
-			return t.strokeWidth ?? 2;
-		}
-	}, t, { get children() {
-		return [ge(), _e()];
-	} }));
-}
-k.displayName = "Close";
-//#endregion
-//#region src/icons/dashboard.tsx
-var ve = /*#__PURE__*/ m("<svg><rect x=3 y=3 width=7 height=7 rx=1></svg>", !1, !0, !1), A = /*#__PURE__*/ m("<svg><rect x=14 y=3 width=7 height=7 rx=1></svg>", !1, !0, !1), j = /*#__PURE__*/ m("<svg><rect x=3 y=14 width=7 height=7 rx=1></svg>", !1, !0, !1), M = /*#__PURE__*/ m("<svg><rect x=14 y=14 width=7 height=7 rx=1></svg>", !1, !0, !1);
-function N(t) {
-	return e(E, n({
+//#region src/icons/angry.tsx
+var ye = /*#__PURE__*/ m("<svg><path d=\"M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z\"></svg>", !1, !0, !1), be = /*#__PURE__*/ m("<svg><path d=\"M8 10.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z\"></svg>", !1, !0, !1), xe = /*#__PURE__*/ m("<svg><path d=\"M16 10.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z\"></svg>", !1, !0, !1), Se = /*#__PURE__*/ m("<svg><path d=\"M8 16c1.769-3.095 6.231-3.095 8 0\"></svg>", !1, !0, !1), Ce = /*#__PURE__*/ m("<svg><path d=\"m7 7 2 1\"></svg>", !1, !0, !1), we = /*#__PURE__*/ m("<svg><path d=\"m15 8 2-1\"></svg>", !1, !0, !1);
+function w(t) {
+	return e(S, n({
 		get size() {
 			return t.size ?? 24;
 		},
@@ -534,114 +496,21 @@ function N(t) {
 		}
 	}, t, { get children() {
 		return [
-			ve(),
-			A(),
-			j(),
-			M()
+			ye(),
+			be(),
+			xe(),
+			Se(),
+			Ce(),
+			we()
 		];
 	} }));
 }
-N.displayName = "Dashboard";
+w.displayName = "Angry";
 //#endregion
-//#region src/icons/draft-book.tsx
-var P = /*#__PURE__*/ m("<svg><path d=\"M4 18V20C4 21.1046 4.89543 22 6 22H13.1429H17.7143H19.8571M4 18H13.1429H17.7143H19.8571M4 18V4C4 2.89543 4.89543 2 6 2H18C19.1046 2 20 2.89543 20 4V17.8571C20 17.936 19.936 18 19.8571 18M20 22H19.8571M19.8571 18L19.2808 18.5379C18.4337 19.3286 18.4337 20.6714 19.2808 21.4621L19.8571 22\"></svg>", !1, !0, !1), F = /*#__PURE__*/ m("<svg><path d=\"M9.6 14H12M14.4 14H12M12 14V6M12 6H8.5C8.22386 6 8 6.22386 8 6.5V7.77778M12 6H15.5C15.7761 6 16 6.22386 16 6.5V7.77778\"></svg>", !1, !0, !1);
-function I(t) {
-	return e(E, n({
-		get size() {
-			return t.size ?? 24;
-		},
-		get color() {
-			return t.color ?? "currentColor";
-		},
-		get strokeWidth() {
-			return t.strokeWidth ?? 2;
-		}
-	}, t, { get children() {
-		return [P(), F()];
-	} }));
-}
-I.displayName = "DraftBook";
-//#endregion
-//#region src/icons/file.tsx
-var ye = /*#__PURE__*/ m("<svg><path d=\"M4 4C4 2.89543 4.89543 2 6 2H12H13.1716C13.702 2 14.2107 2.21071 14.5858 2.58579L19.4142 7.41421C19.7893 7.78929 20 8.29799 20 8.82843V12V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V4Z\"></svg>", !1, !0, !1), be = /*#__PURE__*/ m("<svg><path d=\"M13 2V7C13 8.10457 13.8954 9 15 9H20\"></svg>", !1, !0, !1);
-function L(t) {
-	return e(E, n({
-		get size() {
-			return t.size ?? 24;
-		},
-		get color() {
-			return t.color ?? "currentColor";
-		},
-		get strokeWidth() {
-			return t.strokeWidth ?? 2;
-		}
-	}, t, { get children() {
-		return [ye(), be()];
-	} }));
-}
-L.displayName = "File";
-//#endregion
-//#region src/icons/folder.tsx
-var xe = /*#__PURE__*/ m("<svg><path d=\"M3 7C3 5.89543 3.89543 5 5 5H7.4C8.02951 5 8.62229 5.29639 9 5.8L10.05 7.2C10.4277 7.70361 11.0205 8 11.65 8H19C20.1046 8 21 8.89543 21 10V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17V13.5V8.75V7Z\"></svg>", !1, !0, !1);
-function R(t) {
-	return e(E, n({
-		get size() {
-			return t.size ?? 24;
-		},
-		get color() {
-			return t.color ?? "currentColor";
-		},
-		get strokeWidth() {
-			return t.strokeWidth ?? 2;
-		}
-	}, t, { get children() {
-		return xe();
-	} }));
-}
-R.displayName = "Folder";
-//#endregion
-//#region src/icons/heart.tsx
-var Se = /*#__PURE__*/ m("<svg><path d=\"M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.27 18.6 15.36 13.45 20.03L12 21.35Z\"></svg>", !1, !0, !1);
-function z(t) {
-	return e(E, n({
-		get size() {
-			return t.size ?? 24;
-		},
-		get color() {
-			return t.color ?? "currentColor";
-		},
-		get strokeWidth() {
-			return t.strokeWidth ?? 2;
-		}
-	}, t, { get children() {
-		return Se();
-	} }));
-}
-z.displayName = "Heart";
-//#endregion
-//#region src/icons/home.tsx
-var Ce = /*#__PURE__*/ m("<svg><path d=\"M3 9.46838C3 9.1716 3.13182 8.89015 3.35982 8.70015L11.3598 2.03349C11.7307 1.72445 12.2693 1.72445 12.6402 2.03349L20.6402 8.70015C20.8682 8.89015 21 9.1716 21 9.46837V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9.46838Z\"></svg>", !1, !0, !1), we = /*#__PURE__*/ m("<svg><path d=\"M9 21V14C9 13.4477 9.44772 13 10 13H14C14.5523 13 15 13.4477 15 14V21\"></svg>", !1, !0, !1);
-function B(t) {
-	return e(E, n({
-		get size() {
-			return t.size ?? 24;
-		},
-		get color() {
-			return t.color ?? "currentColor";
-		},
-		get strokeWidth() {
-			return t.strokeWidth ?? 2;
-		}
-	}, t, { get children() {
-		return [Ce(), we()];
-	} }));
-}
-B.displayName = "Home";
-//#endregion
-//#region src/icons/menu-vertical.tsx
-var Te = /*#__PURE__*/ m("<svg><circle cx=12 cy=9 r=1></svg>", !1, !0, !1), V = /*#__PURE__*/ m("<svg><circle cx=12 cy=12 r=1></svg>", !1, !0, !1), Ee = /*#__PURE__*/ m("<svg><circle cx=12 cy=15 r=1></svg>", !1, !0, !1);
-function H(t) {
-	return e(E, n({
+//#region src/icons/annoyed.tsx
+var Te = /*#__PURE__*/ m("<svg><path d=\"M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z\"></svg>", !1, !0, !1), Ee = /*#__PURE__*/ m("<svg><path d=\"M8 15h8\"></svg>", !1, !0, !1), De = /*#__PURE__*/ m("<svg><path d=\"M8 9h2\"></svg>", !1, !0, !1), Oe = /*#__PURE__*/ m("<svg><path d=\"M14 9h2\"></svg>", !1, !0, !1);
+function T(t) {
+	return e(S, n({
 		get size() {
 			return t.size ?? 24;
 		},
@@ -654,17 +523,18 @@ function H(t) {
 	}, t, { get children() {
 		return [
 			Te(),
-			V(),
-			Ee()
+			Ee(),
+			De(),
+			Oe()
 		];
 	} }));
 }
-H.displayName = "MenuVertical";
+T.displayName = "Annoyed";
 //#endregion
-//#region src/icons/menu.tsx
-var De = /*#__PURE__*/ m("<svg><rect x=4 y=5 width=16 height=2 rx=1></svg>", !1, !0, !1), Oe = /*#__PURE__*/ m("<svg><rect x=4 y=11 width=16 height=2 rx=1></svg>", !1, !0, !1), ke = /*#__PURE__*/ m("<svg><rect x=4 y=17 width=16 height=2 rx=1></svg>", !1, !0, !1);
-function U(t) {
-	return e(E, n({
+//#region src/icons/arrow-left-from-line.tsx
+var ke = /*#__PURE__*/ m("<svg><path d=\"m9 7-5.87 5.798c-.173.111-.173.293 0 .404L9 19\"></svg>", !1, !0, !1), Ae = /*#__PURE__*/ m("<svg><path d=\"M5 13h12\"></svg>", !1, !0, !1), je = /*#__PURE__*/ m("<svg><path d=\"M21 6v14\"></svg>", !1, !0, !1);
+function E(t) {
+	return e(S, n({
 		get size() {
 			return t.size ?? 24;
 		},
@@ -676,18 +546,18 @@ function U(t) {
 		}
 	}, t, { get children() {
 		return [
-			De(),
-			Oe(),
-			ke()
+			ke(),
+			Ae(),
+			je()
 		];
 	} }));
 }
-U.displayName = "Menu";
+E.displayName = "ArrowLeftFromLine";
 //#endregion
-//#region src/icons/notification.tsx
-var Ae = /*#__PURE__*/ m("<svg><path d=\"M5 9C5 5.13401 8.13401 2 12 2C15.866 2 19 5.13401 19 9V13.0557C19 13.6767 19.1446 14.2892 19.4223 14.8446L20.5777 17.1554C20.8554 17.7108 21 18.3233 21 18.9443V19H3V18.9443C3 18.3233 3.14458 17.7108 3.42229 17.1554L4.57771 14.8446C4.85542 14.2892 5 13.6767 5 13.0557V9Z\"></svg>", !1, !0, !1), je = /*#__PURE__*/ m("<svg><path d=\"M10 22H14\"></svg>", !1, !0, !1);
-function W(t) {
-	return e(E, n({
+//#region src/icons/arrow-left-to-line.tsx
+var Me = /*#__PURE__*/ m("<svg><path d=\"m13 6-5.87 5.798c-.173.111-.173.293 0 .404L13 18\"></svg>", !1, !0, !1), Ne = /*#__PURE__*/ m("<svg><path d=\"M9 12h12\"></svg>", !1, !0, !1), Pe = /*#__PURE__*/ m("<svg><path d=\"M3 5v14\"></svg>", !1, !0, !1);
+function D(t) {
+	return e(S, n({
 		get size() {
 			return t.size ?? 24;
 		},
@@ -698,53 +568,19 @@ function W(t) {
 			return t.strokeWidth ?? 2;
 		}
 	}, t, { get children() {
-		return [Ae(), je()];
+		return [
+			Me(),
+			Ne(),
+			Pe()
+		];
 	} }));
 }
-W.displayName = "Notification";
+D.displayName = "ArrowLeftToLine";
 //#endregion
-//#region src/icons/pen-line.tsx
-var Me = /*#__PURE__*/ m("<svg><g clip-path=url(#clip0_47_35)><path d=\"M8.21428 20.0643L21.1165 6.4117C22.155 5.31286 22.106 3.58026 21.0072 2.54182C19.9083 1.50338 18.1757 1.55234 17.1373 2.65117L4.18896 16.3525C4.11277 16.4332 4.05053 16.5259 4.00478 16.6269L1.72771 21.6562C1.54474 22.0603 1.93957 22.4848 2.35589 22.3316L7.83287 20.3159C7.97772 20.2626 8.10827 20.1765 8.21428 20.0643Z\"></path><path d=\"M12 21H21\"></svg>", !1, !0, !1), Ne = /*#__PURE__*/ m("<svg><defs><clipPath id=clip0_47_35><rect width=24 height=24></svg>", !1, !0, !1);
-function G(t) {
-	return e(E, n({
-		get size() {
-			return t.size ?? 24;
-		},
-		get color() {
-			return t.color ?? "currentColor";
-		},
-		get strokeWidth() {
-			return t.strokeWidth ?? 2;
-		}
-	}, t, { get children() {
-		return [Me(), Ne()];
-	} }));
-}
-G.displayName = "PenLine";
-//#endregion
-//#region src/icons/play-arrow.tsx
-var Pe = /*#__PURE__*/ m("<svg><path d=\"M20.4183 11.7363C20.6175 11.8521 20.6172 12.1399 20.4179 12.2553L6.41609 20.3637C6.21599 20.4796 5.96555 20.3351 5.96575 20.1038L5.98014 3.86221C5.98034 3.63098 6.23104 3.4869 6.43094 3.60314L20.4183 11.7363Z\"></svg>", !1, !0, !1);
-function K(t) {
-	return e(E, n({
-		get size() {
-			return t.size ?? 24;
-		},
-		get color() {
-			return t.color ?? "currentColor";
-		},
-		get strokeWidth() {
-			return t.strokeWidth ?? 2;
-		}
-	}, t, { get children() {
-		return Pe();
-	} }));
-}
-K.displayName = "PlayArrow";
-//#endregion
-//#region src/icons/plus.tsx
-var Fe = /*#__PURE__*/ m("<svg><rect x=11 y=5 width=2 height=14 rx=1></svg>", !1, !0, !1), Ie = /*#__PURE__*/ m("<svg><rect x=19 y=11 width=2 height=14 rx=1 transform=\"rotate(90 19 11)\"></svg>", !1, !0, !1);
-function q(t) {
-	return e(E, n({
+//#region src/icons/arrow-left.tsx
+var Fe = /*#__PURE__*/ m("<svg><path d=\"m12 5-6.646 6.646a.5.5 0 0 0 0 .708L12 19\"></svg>", !1, !0, !1), Ie = /*#__PURE__*/ m("<svg><path d=\"M6 12h13\"></svg>", !1, !0, !1);
+function O(t) {
+	return e(S, n({
 		get size() {
 			return t.size ?? 24;
 		},
@@ -758,12 +594,12 @@ function q(t) {
 		return [Fe(), Ie()];
 	} }));
 }
-q.displayName = "Plus";
+O.displayName = "ArrowLeft";
 //#endregion
-//#region src/icons/search.tsx
-var Le = /*#__PURE__*/ m("<svg><circle cx=11 cy=11 r=8></svg>", !1, !0, !1), Re = /*#__PURE__*/ m("<svg><path d=\"M16.9471 17.0541L21 21\"></svg>", !1, !0, !1);
-function J(t) {
-	return e(E, n({
+//#region src/icons/arrow-right-from-line.tsx
+var Le = /*#__PURE__*/ m("<svg><path d=\"M7 12h12\"></svg>", !1, !0, !1), Re = /*#__PURE__*/ m("<svg><path d=\"M3 5v14\"></svg>", !1, !0, !1), ze = /*#__PURE__*/ m("<svg><path d=\"m15 6 5.848 5.646a.49.49 0 0 1 0 .708L15 18\"></svg>", !1, !0, !1);
+function k(t) {
+	return e(S, n({
 		get size() {
 			return t.size ?? 24;
 		},
@@ -774,34 +610,19 @@ function J(t) {
 			return t.strokeWidth ?? 2;
 		}
 	}, t, { get children() {
-		return [Le(), Re()];
+		return [
+			Le(),
+			Re(),
+			ze()
+		];
 	} }));
 }
-J.displayName = "Search";
+k.displayName = "ArrowRightFromLine";
 //#endregion
-//#region src/icons/settings.tsx
-var ze = /*#__PURE__*/ m("<svg><path d=\"M12.3192 2C13.7332 2.00023 14.955 2.9877 15.2518 4.37012L15.3056 4.61914C15.4302 5.19874 16.0289 5.54288 16.5927 5.35938L16.6972 5.3252C18.06 4.8816 19.5463 5.46451 20.245 6.71582L20.621 7.3877C21.2895 8.58516 21.0605 10.0838 20.0653 11.0273L19.8056 11.2734C19.3896 11.6677 19.3888 12.3311 19.8046 12.7256L20.0663 12.9727C21.0609 13.9162 21.2891 15.4142 20.621 16.6113L20.246 17.2842C19.5472 18.5358 18.0601 19.1177 16.6972 18.6738L16.5927 18.6396C16.0288 18.4561 15.4301 18.801 15.3056 19.3809L15.2518 19.6299C14.9551 21.0123 13.7331 21.9998 12.3192 22H11.6825C10.2688 22 9.04722 21.013 8.7499 19.6309L8.69619 19.3809C8.57156 18.8011 7.97197 18.4559 7.4081 18.6396L7.30458 18.6738C5.94167 19.1179 4.45466 18.5356 3.75576 17.2842L3.38076 16.6113C2.71254 15.4141 2.94069 13.9162 3.93544 12.9727L4.19619 12.7256C4.61197 12.3312 4.61197 11.6688 4.19619 11.2744L3.93544 11.0273C2.94058 10.0837 2.71227 8.58496 3.38076 7.3877L3.75576 6.71582C4.45452 5.46434 5.94166 4.88244 7.30458 5.32617L7.4081 5.35938C7.97191 5.54294 8.57155 5.19883 8.69619 4.61914L8.7499 4.36914C9.04721 2.98706 10.2687 2 11.6825 2H12.3192ZM11.6825 4C11.2112 4 10.8041 4.32929 10.705 4.79004L10.6513 5.03906C10.2774 6.77815 8.4804 7.81241 6.78896 7.26172L6.68544 7.22754C6.23113 7.07963 5.73574 7.27425 5.50283 7.69141L5.12685 8.36328C4.90414 8.76235 4.9808 9.26166 5.3124 9.57617L5.57216 9.82324C6.81951 11.0063 6.81952 12.9937 5.57216 14.1768L5.3124 14.4238C4.98079 14.7383 4.90412 15.2376 5.12685 15.6367L5.50185 16.3086C5.73482 16.7259 6.23108 16.9206 6.68544 16.7725L6.78896 16.7383C8.48045 16.1873 10.2773 17.2208 10.6513 18.96L10.705 19.21C10.804 19.6707 11.2112 20 11.6825 20H12.3192C12.7904 19.9998 13.1978 19.6707 13.2968 19.21L13.3495 18.9609C13.7231 17.2214 15.52 16.1875 17.2118 16.7383L17.3163 16.7725C17.7707 16.9205 18.2659 16.7259 18.4989 16.3086L18.8749 15.6367C19.0976 15.2377 19.021 14.7383 18.6893 14.4238L18.4286 14.1758C17.1812 12.9924 17.1815 11.0052 18.4296 9.82227L18.6893 9.57617C19.0212 9.26164 19.0968 8.76149 18.8739 8.3623L18.4989 7.69043C18.2659 7.27356 17.7705 7.07972 17.3163 7.22754L17.2118 7.26172C15.5203 7.81231 13.7231 6.77832 13.3495 5.03906L13.2968 4.79004C13.1978 4.32934 12.7904 4.00023 12.3192 4H11.6825ZM12.0009 8.5C13.9338 8.50007 15.5009 10.067 15.5009 12C15.5009 13.933 13.9338 15.4999 12.0009 15.5C10.0679 15.5 8.50087 13.933 8.50087 12C8.50087 10.067 10.0679 8.5 12.0009 8.5ZM12.0009 10.5C11.1724 10.5 10.5009 11.1716 10.5009 12C10.5009 12.8284 11.1724 13.5 12.0009 13.5C12.8292 13.4999 13.5009 12.8284 13.5009 12C13.5009 11.1716 12.8292 10.5001 12.0009 10.5Z\"></svg>", !1, !0, !1);
-function Y(t) {
-	return e(E, n({
-		get size() {
-			return t.size ?? 24;
-		},
-		get color() {
-			return t.color ?? "currentColor";
-		},
-		get strokeWidth() {
-			return t.strokeWidth ?? 2;
-		}
-	}, t, { get children() {
-		return ze();
-	} }));
-}
-Y.displayName = "Settings";
-//#endregion
-//#region src/icons/share.tsx
-var Be = /*#__PURE__*/ m("<svg><path d=\"M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8\"></svg>", !1, !0, !1), Ve = /*#__PURE__*/ m("<svg><polyline points=\"16 6 12 2 8 6\"></svg>", !1, !0, !1), He = /*#__PURE__*/ m("<svg><line x1=12 y1=2 x2=12 y2=15></svg>", !1, !0, !1);
-function X(t) {
-	return e(E, n({
+//#region src/icons/arrow-right-to-line.tsx
+var Be = /*#__PURE__*/ m("<svg><path d=\"M3 12.051h12\"></svg>", !1, !0, !1), Ve = /*#__PURE__*/ m("<svg><path d=\"M21 5v14\"></svg>", !1, !0, !1), He = /*#__PURE__*/ m("<svg><path d=\"m11 6 5.646 5.646a.5.5 0 0 1 0 .708L11 18\"></svg>", !1, !0, !1);
+function A(t) {
+	return e(S, n({
 		get size() {
 			return t.size ?? 24;
 		},
@@ -819,12 +640,12 @@ function X(t) {
 		];
 	} }));
 }
-X.displayName = "Share";
+A.displayName = "ArrowRightToLine";
 //#endregion
-//#region src/icons/star.tsx
-var Ue = /*#__PURE__*/ m("<svg><path d=\"M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z\"></svg>", !1, !0, !1);
-function Z(t) {
-	return e(E, n({
+//#region src/icons/arrow-up-left.tsx
+var Ue = /*#__PURE__*/ m("<svg><path d=\"m8 8 9 9\"></svg>", !1, !0, !1), We = /*#__PURE__*/ m("<svg><path d=\"M7 17V7.5a.5.5 0 0 1 .5-.5H17\"></svg>", !1, !0, !1);
+function j(t) {
+	return e(S, n({
 		get size() {
 			return t.size ?? 24;
 		},
@@ -835,15 +656,15 @@ function Z(t) {
 			return t.strokeWidth ?? 2;
 		}
 	}, t, { get children() {
-		return Ue();
+		return [Ue(), We()];
 	} }));
 }
-Z.displayName = "Star";
+j.displayName = "ArrowUpLeft";
 //#endregion
-//#region src/icons/thumb.tsx
-var We = /*#__PURE__*/ m("<svg><path d=\"M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3\"></svg>", !1, !0, !1);
-function Q(t) {
-	return e(E, n({
+//#region src/icons/arrow-up-right.tsx
+var Ge = /*#__PURE__*/ m("<svg><path d=\"M7 7h9.5a.5.5 0 0 1 .5.5V17\"></svg>", !1, !0, !1), Ke = /*#__PURE__*/ m("<svg><path d=\"m7 17 9-9\"></svg>", !1, !0, !1);
+function M(t) {
+	return e(S, n({
 		get size() {
 			return t.size ?? 24;
 		},
@@ -854,15 +675,15 @@ function Q(t) {
 			return t.strokeWidth ?? 2;
 		}
 	}, t, { get children() {
-		return We();
+		return [Ge(), Ke()];
 	} }));
 }
-Q.displayName = "Thumb";
+M.displayName = "ArrowUpRight";
 //#endregion
-//#region src/icons/users.tsx
-var Ge = /*#__PURE__*/ m("<svg><circle cx=10 cy=8 r=5></svg>", !1, !0, !1), Ke = /*#__PURE__*/ m("<svg><path d=\"M18 21C18 16.5817 14.4183 13 10 13C5.58172 13 2 16.5817 2 21\"></svg>", !1, !0, !1), qe = /*#__PURE__*/ m("<svg><path d=\"M18 4C18.8333 5.33333 20 8.9 18 12.5\"></svg>", !1, !0, !1), Je = /*#__PURE__*/ m("<svg><path d=\"M18 12.5C19.5 13.8333 22.4 17.4 22 21\"></svg>", !1, !0, !1);
-function $(t) {
-	return e(E, n({
+//#region src/icons/bar-chart.tsx
+var qe = /*#__PURE__*/ m("<svg><path d=\"M3 3v17a1 1 0 0 0 1 1h17\"></svg>", !1, !0, !1), Je = /*#__PURE__*/ m("<svg><path d=\"M7 6h4\"></svg>", !1, !0, !1), Ye = /*#__PURE__*/ m("<svg><path d=\"M7 11h12\"></svg>", !1, !0, !1), Xe = /*#__PURE__*/ m("<svg><path d=\"M7 16h8\"></svg>", !1, !0, !1);
+function N(t) {
+	return e(S, n({
 		get size() {
 			return t.size ?? 24;
 		},
@@ -874,15 +695,1948 @@ function $(t) {
 		}
 	}, t, { get children() {
 		return [
-			Ge(),
-			Ke(),
 			qe(),
-			Je()
+			Je(),
+			Ye(),
+			Xe()
 		];
 	} }));
 }
-$.displayName = "Users";
+N.displayName = "BarChart";
 //#endregion
-export { D as Bookmark, O as Chat, k as Close, N as Dashboard, I as DraftBook, L as File, R as Folder, z as Heart, B as Home, U as Menu, H as MenuVertical, W as Notification, G as PenLine, K as PlayArrow, q as Plus, J as Search, Y as Settings, X as Share, Z as Star, Q as Thumb, $ as Users };
+//#region src/icons/bell-ring.tsx
+var Ze = /*#__PURE__*/ m("<svg><path d=\"M5.778 9.588C5.778 5.95 8.564 3 12 3s6.222 2.95 6.222 6.588v3.817c0 .585.129 1.161.376 1.684l1.027 2.175c.247.523.375 1.1.375 1.684V19H4v-.052c0-.585.129-1.161.375-1.684l1.027-2.175c.247-.523.376-1.1.376-1.684z\"></svg>", !1, !0, !1), Qe = /*#__PURE__*/ m("<svg><path d=\"M10 22h4\"></svg>", !1, !0, !1), $e = /*#__PURE__*/ m("<svg><path d=\"M2 8c.167-.833.5-3.5 3-6\"></svg>", !1, !0, !1), et = /*#__PURE__*/ m("<svg><path d=\"M19 2c.833.833 2.6 3.2 3 6\"></svg>", !1, !0, !1);
+function P(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Ze(),
+			Qe(),
+			$e(),
+			et()
+		];
+	} }));
+}
+P.displayName = "BellRing";
+//#endregion
+//#region src/icons/bookmark.tsx
+var tt = /*#__PURE__*/ m("<svg><path d=\"M5 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v16.229a1 1 0 0 1-1.517.856l-4.966-2.996a1 1 0 0 0-1.033 0l-4.968 2.996A1 1 0 0 1 5 20.23z\"></svg>", !1, !0, !1);
+function F(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return tt();
+	} }));
+}
+F.displayName = "Bookmark";
+//#endregion
+//#region src/icons/calendar-check.tsx
+var nt = /*#__PURE__*/ m("<svg><path d=\"M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z\"></svg>", !1, !0, !1), rt = /*#__PURE__*/ m("<svg><path d=\"M8 2v4\"></svg>", !1, !0, !1), it = /*#__PURE__*/ m("<svg><path d=\"M16 2v4\"></svg>", !1, !0, !1), at = /*#__PURE__*/ m("<svg><path d=\"M3 10h18\"></svg>", !1, !0, !1), ot = /*#__PURE__*/ m("<svg><path d=\"m9 16.4 1.93 1.544a.1.1 0 0 0 .133-.007L15 14\"></svg>", !1, !0, !1);
+function I(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			nt(),
+			rt(),
+			it(),
+			at(),
+			ot()
+		];
+	} }));
+}
+I.displayName = "CalendarCheck";
+//#endregion
+//#region src/icons/calendar-days.tsx
+var st = /*#__PURE__*/ m("<svg><path d=\"M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z\"></svg>", !1, !0, !1), ct = /*#__PURE__*/ m("<svg><path d=\"M8 2v4\"></svg>", !1, !0, !1), lt = /*#__PURE__*/ m("<svg><path d=\"M16 2v4\"></svg>", !1, !0, !1), ut = /*#__PURE__*/ m("<svg><path d=\"M3 10h18\"></svg>", !1, !0, !1), dt = /*#__PURE__*/ m("<svg><circle cx=8 cy=14 r=0.5></svg>", !1, !0, !1), ft = /*#__PURE__*/ m("<svg><circle cx=8 cy=18 r=0.5></svg>", !1, !0, !1), pt = /*#__PURE__*/ m("<svg><circle cx=12 cy=18 r=0.5></svg>", !1, !0, !1), mt = /*#__PURE__*/ m("<svg><circle cx=16 cy=18 r=0.5></svg>", !1, !0, !1), ht = /*#__PURE__*/ m("<svg><circle cx=12 cy=14 r=0.5></svg>", !1, !0, !1), gt = /*#__PURE__*/ m("<svg><circle cx=16 cy=14 r=0.5></svg>", !1, !0, !1);
+function L(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			st(),
+			ct(),
+			lt(),
+			ut(),
+			dt(),
+			ft(),
+			pt(),
+			mt(),
+			ht(),
+			gt()
+		];
+	} }));
+}
+L.displayName = "CalendarDays";
+//#endregion
+//#region src/icons/calendar-x.tsx
+var _t = /*#__PURE__*/ m("<svg><path d=\"M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z\"></svg>", !1, !0, !1), vt = /*#__PURE__*/ m("<svg><path d=\"M8 2v4\"></svg>", !1, !0, !1), yt = /*#__PURE__*/ m("<svg><path d=\"M16 2v4\"></svg>", !1, !0, !1), bt = /*#__PURE__*/ m("<svg><path d=\"M3 10h18\"></svg>", !1, !0, !1), xt = /*#__PURE__*/ m("<svg><path d=\"m10 14 4 4\"></svg>", !1, !0, !1), St = /*#__PURE__*/ m("<svg><path d=\"m10 18 4-4\"></svg>", !1, !0, !1);
+function R(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			_t(),
+			vt(),
+			yt(),
+			bt(),
+			xt(),
+			St()
+		];
+	} }));
+}
+R.displayName = "CalendarX";
+//#endregion
+//#region src/icons/calendar.tsx
+var Ct = /*#__PURE__*/ m("<svg><rect width=18 height=18 x=3 y=4 rx=2></svg>", !1, !0, !1), wt = /*#__PURE__*/ m("<svg><path d=\"M8 2v4\"></svg>", !1, !0, !1), Tt = /*#__PURE__*/ m("<svg><path d=\"M16 2v4\"></svg>", !1, !0, !1), Et = /*#__PURE__*/ m("<svg><path d=\"M3 10h18\"></svg>", !1, !0, !1);
+function z(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Ct(),
+			wt(),
+			Tt(),
+			Et()
+		];
+	} }));
+}
+z.displayName = "Calendar";
+//#endregion
+//#region src/icons/chat.tsx
+var Dt = /*#__PURE__*/ m("<svg><path d=\"M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v9.304a2 2 0 0 1-2 2H7.659a2 2 0 0 0-1.189.392l-3.673 2.715A.5.5 0 0 1 2 20.009z\"></svg>", !1, !0, !1), Ot = /*#__PURE__*/ m("<svg><path d=\"M6 8h11\"></svg>", !1, !0, !1), kt = /*#__PURE__*/ m("<svg><path d=\"M6 13h9\"></svg>", !1, !0, !1);
+function B(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Dt(),
+			Ot(),
+			kt()
+		];
+	} }));
+}
+B.displayName = "Chat";
+//#endregion
+//#region src/icons/check.tsx
+var At = /*#__PURE__*/ m("<svg><path d=\"m4 13 8.07 5.675a.5.5 0 0 0 .73-.174L20 5\"></svg>", !1, !0, !1);
+function V(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return At();
+	} }));
+}
+V.displayName = "Check";
+//#endregion
+//#region src/icons/chevron-down.tsx
+var jt = /*#__PURE__*/ m("<svg><path d=\"m6 9 5.646 5.646a.5.5 0 0 0 .708 0L18 9\"></svg>", !1, !0, !1);
+function H(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return jt();
+	} }));
+}
+H.displayName = "ChevronDown";
+//#endregion
+//#region src/icons/chevron-up.tsx
+var Mt = /*#__PURE__*/ m("<svg><path d=\"m6 15 5.646-5.646a.5.5 0 0 1 .708 0L18 15\"></svg>", !1, !0, !1);
+function U(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return Mt();
+	} }));
+}
+U.displayName = "ChevronUp";
+//#endregion
+//#region src/icons/chevrons-down-up.tsx
+var Nt = /*#__PURE__*/ m("<svg><path d=\"m7 4 4.705 4.874a.407.407 0 0 0 .59 0L17 4\"></svg>", !1, !0, !1), Pt = /*#__PURE__*/ m("<svg><path d=\"m7 20 4.646-4.646a.5.5 0 0 1 .708 0L17 20\"></svg>", !1, !0, !1);
+function W(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [Nt(), Pt()];
+	} }));
+}
+W.displayName = "ChevronsDownUp";
+//#endregion
+//#region src/icons/chevrons-down.tsx
+var Ft = /*#__PURE__*/ m("<svg><path d=\"m7 6 4.705 4.874a.407.407 0 0 0 .59 0L17 6\"></svg>", !1, !0, !1), It = /*#__PURE__*/ m("<svg><path d=\"m7 13 4.705 4.874a.407.407 0 0 0 .59 0L17 13\"></svg>", !1, !0, !1);
+function G(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [Ft(), It()];
+	} }));
+}
+G.displayName = "ChevronsDown";
+//#endregion
+//#region src/icons/chevrons-up-down.tsx
+var Lt = /*#__PURE__*/ m("<svg><path d=\"m7 9 4.646-4.646a.5.5 0 0 1 .708 0L17 9\"></svg>", !1, !0, !1), Rt = /*#__PURE__*/ m("<svg><path d=\"m7 15 4.646 4.646a.5.5 0 0 0 .708 0L17 15\"></svg>", !1, !0, !1);
+function K(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [Lt(), Rt()];
+	} }));
+}
+K.displayName = "ChevronsUpDown";
+//#endregion
+//#region src/icons/chevrons-up.tsx
+var zt = /*#__PURE__*/ m("<svg><path d=\"m7 11 4.646-4.646a.5.5 0 0 1 .708 0L17 11\"></svg>", !1, !0, !1), Bt = /*#__PURE__*/ m("<svg><path d=\"m7 18 4.646-4.646a.5.5 0 0 1 .708 0L17 18\"></svg>", !1, !0, !1);
+function q(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [zt(), Bt()];
+	} }));
+}
+q.displayName = "ChevronsUp";
+//#endregion
+//#region src/icons/circle-arrow-left.tsx
+var Vt = /*#__PURE__*/ m("<svg><path d=\"m12 8-3.914 3.798a.28.28 0 0 0 0 .404L12 16\"></svg>", !1, !0, !1), Ht = /*#__PURE__*/ m("<svg><path d=\"M9 12h7\"></svg>", !1, !0, !1), Ut = /*#__PURE__*/ m("<svg><circle cx=12 cy=12 r=10></svg>", !1, !0, !1);
+function J(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Vt(),
+			Ht(),
+			Ut()
+		];
+	} }));
+}
+J.displayName = "CircleArrowLeft";
+//#endregion
+//#region src/icons/circle-arrow-out-up-left.tsx
+var Wt = /*#__PURE__*/ m("<svg><path d=\"m3 3 8 8\"></svg>", !1, !0, !1), Gt = /*#__PURE__*/ m("<svg><path d=\"M2 8V2.5a.5.5 0 0 1 .5-.5H8\"></svg>", !1, !0, !1), Kt = /*#__PURE__*/ m("<svg><path d=\"M2 12c0 5.523 4.477 10 10 10s10-4.477 10-10S17.523 2 12 2\"></svg>", !1, !0, !1);
+function Y(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Wt(),
+			Gt(),
+			Kt()
+		];
+	} }));
+}
+Y.displayName = "CircleArrowOutUpLeft";
+//#endregion
+//#region src/icons/circle-arrow-out-up-right.tsx
+var qt = /*#__PURE__*/ m("<svg><path d=\"M16 2h5.5a.5.5 0 0 1 .5.5V8\"></svg>", !1, !0, !1), Jt = /*#__PURE__*/ m("<svg><path d=\"m13 11 8-8\"></svg>", !1, !0, !1), Yt = /*#__PURE__*/ m("<svg><path d=\"M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2\"></svg>", !1, !0, !1);
+function X(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			qt(),
+			Jt(),
+			Yt()
+		];
+	} }));
+}
+X.displayName = "CircleArrowOutUpRight";
+//#endregion
+//#region src/icons/circle-chevron-down.tsx
+var Xt = /*#__PURE__*/ m("<svg><path d=\"m8 10 3.764 3.899c.13.135.341.135.472 0L16 10\"></svg>", !1, !0, !1), Zt = /*#__PURE__*/ m("<svg><circle cx=12 cy=12 r=10></svg>", !1, !0, !1);
+function Z(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [Xt(), Zt()];
+	} }));
+}
+Z.displayName = "CircleChevronDown";
+//#endregion
+//#region src/icons/circle-chevron-up.tsx
+var Qt = /*#__PURE__*/ m("<svg><path d=\"m8 14 3.646-3.646a.5.5 0 0 1 .708 0L16 14\"></svg>", !1, !0, !1), $t = /*#__PURE__*/ m("<svg><path d=\"M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z\"></svg>", !1, !0, !1);
+function Q(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [Qt(), $t()];
+	} }));
+}
+Q.displayName = "CircleChevronUp";
+//#endregion
+//#region src/icons/clock-arrow-left.tsx
+var en = /*#__PURE__*/ m("<svg><path d=\"M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10\"></svg>", !1, !0, !1), tn = /*#__PURE__*/ m("<svg><path d=\"m18 13-3.914 3.899c-.115.056-.115.146 0 .202L18 21\"></svg>", !1, !0, !1), nn = /*#__PURE__*/ m("<svg><path d=\"M15 17h7\"></svg>", !1, !0, !1), rn = /*#__PURE__*/ m("<svg><path d=\"M12 6v5l1 1\"></svg>", !1, !0, !1);
+function an(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			en(),
+			tn(),
+			nn(),
+			rn()
+		];
+	} }));
+}
+an.displayName = "ClockArrowLeft";
+//#endregion
+//#region src/icons/column-chart-plain-increasing.tsx
+var on = /*#__PURE__*/ m("<svg><path d=\"M5 21v-6\"></svg>", !1, !0, !1), sn = /*#__PURE__*/ m("<svg><path d=\"M19 3v18\"></svg>", !1, !0, !1), cn = /*#__PURE__*/ m("<svg><path d=\"M12 21V9\"></svg>", !1, !0, !1);
+function ln(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			on(),
+			sn(),
+			cn()
+		];
+	} }));
+}
+ln.displayName = "ColumnChartPlainIncreasing";
+//#endregion
+//#region src/icons/column-chart.tsx
+var un = /*#__PURE__*/ m("<svg><path d=\"M3 3v17a1 1 0 0 0 1 1h17\"></svg>", !1, !0, !1), dn = /*#__PURE__*/ m("<svg><path d=\"M8 17v-4\"></svg>", !1, !0, !1), fn = /*#__PURE__*/ m("<svg><path d=\"M13 5v12\"></svg>", !1, !0, !1), pn = /*#__PURE__*/ m("<svg><path d=\"M18 17V9\"></svg>", !1, !0, !1);
+function mn(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			un(),
+			dn(),
+			fn(),
+			pn()
+		];
+	} }));
+}
+mn.displayName = "ColumnChart";
+//#endregion
+//#region src/icons/credit-card.tsx
+var hn = /*#__PURE__*/ m("<svg><path d=\"M2 10v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7M2 10V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3M2 10h20\"></svg>", !1, !0, !1);
+function gn(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return hn();
+	} }));
+}
+gn.displayName = "CreditCard";
+//#endregion
+//#region src/icons/download.tsx
+var _n = /*#__PURE__*/ m("<svg><path d=\"M3 15v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4\"></svg>", !1, !0, !1), vn = /*#__PURE__*/ m("<svg><path d=\"m6 10 5.293 5.293a1 1 0 0 0 1.414 0L18 10\"></svg>", !1, !0, !1), yn = /*#__PURE__*/ m("<svg><path d=\"M12 3v11\"></svg>", !1, !0, !1);
+function bn(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			_n(),
+			vn(),
+			yn()
+		];
+	} }));
+}
+bn.displayName = "Download";
+//#endregion
+//#region src/icons/draft-book.tsx
+var xn = /*#__PURE__*/ m("<svg><path d=\"M4 18v2a2 2 0 0 0 2 2h13.857M4 18h15.857M4 18V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.857a.143.143 0 0 1-.143.143M20 22h-.143m0-4-.576.538a2 2 0 0 0 0 2.924l.576.538\"></svg>", !1, !0, !1), Sn = /*#__PURE__*/ m("<svg><path d=\"M9.6 14H12m2.4 0H12m0 0V6m0 0H8.5a.5.5 0 0 0-.5.5v1.278M12 6h3.5a.5.5 0 0 1 .5.5v1.278\"></svg>", !1, !0, !1);
+function Cn(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [xn(), Sn()];
+	} }));
+}
+Cn.displayName = "DraftBook";
+//#endregion
+//#region src/icons/external-link.tsx
+var wn = /*#__PURE__*/ m("<svg><path d=\"M18 13v7.583c0 .23-.187.417-.417.417H3.417A.417.417 0 0 1 3 20.583V6.417c0-.23.187-.417.417-.417H11\"></svg>", !1, !0, !1), Tn = /*#__PURE__*/ m("<svg><path d=\"M15 3h5.5a.5.5 0 0 1 .5.5V9\"></svg>", !1, !0, !1), En = /*#__PURE__*/ m("<svg><path d=\"M10 14 20 4\"></svg>", !1, !0, !1);
+function Dn(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			wn(),
+			Tn(),
+			En()
+		];
+	} }));
+}
+Dn.displayName = "ExternalLink";
+//#endregion
+//#region src/icons/eye-closed.tsx
+var On = /*#__PURE__*/ m("<svg><path d=\"M21 8c0 3.314-4.03 6-9 6s-9-2.686-9-6\"></svg>", !1, !0, !1), kn = /*#__PURE__*/ m("<svg><path d=\"m5 12-3 3\"></svg>", !1, !0, !1), An = /*#__PURE__*/ m("<svg><path d=\"m19 12 3 3\"></svg>", !1, !0, !1), jn = /*#__PURE__*/ m("<svg><path d=\"m9 14-1 4\"></svg>", !1, !0, !1), Mn = /*#__PURE__*/ m("<svg><path d=\"m14 14 1 4\"></svg>", !1, !0, !1);
+function Nn(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			On(),
+			kn(),
+			An(),
+			jn(),
+			Mn()
+		];
+	} }));
+}
+Nn.displayName = "EyeClosed";
+//#endregion
+//#region src/icons/eye.tsx
+var Pn = /*#__PURE__*/ m("<svg><circle cx=12 cy=12 r=3></svg>", !1, !0, !1), Fn = /*#__PURE__*/ m("<svg><path d=\"M2 12C5 6.718 13.2-.678 22 12\"></svg>", !1, !0, !1), In = /*#__PURE__*/ m("<svg><path d=\"M22.008 12.023c-3 5.282-11.2 12.678-20 0\"></svg>", !1, !0, !1);
+function Ln(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Pn(),
+			Fn(),
+			In()
+		];
+	} }));
+}
+Ln.displayName = "Eye";
+//#endregion
+//#region src/icons/file.tsx
+var Rn = /*#__PURE__*/ m("<svg><path d=\"M4 4a2 2 0 0 1 2-2h7.172a2 2 0 0 1 1.414.586l4.828 4.828A2 2 0 0 1 20 8.828V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z\"></svg>", !1, !0, !1), zn = /*#__PURE__*/ m("<svg><path d=\"M13 2v5a2 2 0 0 0 2 2h5\"></svg>", !1, !0, !1);
+function Bn(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [Rn(), zn()];
+	} }));
+}
+Bn.displayName = "File";
+//#endregion
+//#region src/icons/folder.tsx
+var Vn = /*#__PURE__*/ m("<svg><path d=\"M3 7a2 2 0 0 1 2-2h2.4a2 2 0 0 1 1.6.8l1.05 1.4a2 2 0 0 0 1.6.8H19a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z\"></svg>", !1, !0, !1);
+function Hn(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return Vn();
+	} }));
+}
+Hn.displayName = "Folder";
+//#endregion
+//#region src/icons/frown.tsx
+var Un = /*#__PURE__*/ m("<svg><circle cx=12 cy=12 r=10></svg>", !1, !0, !1), Wn = /*#__PURE__*/ m("<svg><circle cx=8 cy=10 r=0.5></svg>", !1, !0, !1), Gn = /*#__PURE__*/ m("<svg><circle cx=16 cy=10 r=0.5></svg>", !1, !0, !1), Kn = /*#__PURE__*/ m("<svg><path d=\"M8 16c1.769-3.095 6.231-3.095 8 0\"></svg>", !1, !0, !1);
+function qn(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Un(),
+			Wn(),
+			Gn(),
+			Kn()
+		];
+	} }));
+}
+qn.displayName = "Frown";
+//#endregion
+//#region src/icons/grid-2x2-plus.tsx
+var Jn = /*#__PURE__*/ m("<svg><path d=\"M12 21H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v8\"></svg>", !1, !0, !1), Yn = /*#__PURE__*/ m("<svg><path d=\"M3 12h18\"></svg>", !1, !0, !1), Xn = /*#__PURE__*/ m("<svg><path d=\"M12 3v18\"></svg>", !1, !0, !1), Zn = /*#__PURE__*/ m("<svg><path d=\"M19 16v6\"></svg>", !1, !0, !1), Qn = /*#__PURE__*/ m("<svg><path d=\"M16 19h6\"></svg>", !1, !0, !1);
+function $n(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Jn(),
+			Yn(),
+			Xn(),
+			Zn(),
+			Qn()
+		];
+	} }));
+}
+$n.displayName = "Grid2x2Plus";
+//#endregion
+//#region src/icons/grid-2x2-x.tsx
+var er = /*#__PURE__*/ m("<svg><path d=\"M12 21H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v8\"></svg>", !1, !0, !1), tr = /*#__PURE__*/ m("<svg><path d=\"M3 12h18\"></svg>", !1, !0, !1), nr = /*#__PURE__*/ m("<svg><path d=\"M12 3v18\"></svg>", !1, !0, !1), rr = /*#__PURE__*/ m("<svg><path d=\"m16 16 6 5\"></svg>", !1, !0, !1), ir = /*#__PURE__*/ m("<svg><path d=\"m16 21 6-5\"></svg>", !1, !0, !1);
+function ar(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			er(),
+			tr(),
+			nr(),
+			rr(),
+			ir()
+		];
+	} }));
+}
+ar.displayName = "Grid2x2X";
+//#endregion
+//#region src/icons/grid-2x2.tsx
+var or = /*#__PURE__*/ m("<svg><rect width=18 height=18 x=3 y=3 rx=1></svg>", !1, !0, !1), sr = /*#__PURE__*/ m("<svg><path d=\"M3 12h18\"></svg>", !1, !0, !1), cr = /*#__PURE__*/ m("<svg><path d=\"M12 3v18\"></svg>", !1, !0, !1);
+function lr(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			or(),
+			sr(),
+			cr()
+		];
+	} }));
+}
+lr.displayName = "Grid2x2";
+//#endregion
+//#region src/icons/grid-3x3.tsx
+var ur = /*#__PURE__*/ m("<svg><path d=\"M3 4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z\"></svg>", !1, !0, !1), dr = /*#__PURE__*/ m("<svg><path d=\"M9 3v18\"></svg>", !1, !0, !1), fr = /*#__PURE__*/ m("<svg><path d=\"M15 3v18\"></svg>", !1, !0, !1), pr = /*#__PURE__*/ m("<svg><path d=\"M3 9h18\"></svg>", !1, !0, !1), mr = /*#__PURE__*/ m("<svg><path d=\"M3 15h18\"></svg>", !1, !0, !1);
+function hr(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			ur(),
+			dr(),
+			fr(),
+			pr(),
+			mr()
+		];
+	} }));
+}
+hr.displayName = "Grid3x3";
+//#endregion
+//#region src/icons/heart.tsx
+var gr = /*#__PURE__*/ m("<svg><g clip-path=url(#a)><path d=\"m11.958 7.692-1.183-1.27C7.639 3.053 2 5.272 2 9.874c0 1.451.623 2.834 1.71 3.795l8.098 7.16a.29.29 0 0 0 .384 0l8.097-7.16A5.07 5.07 0 0 0 22 9.875c0-4.602-5.639-6.82-8.775-3.454l-1.183 1.27a.06.06 0 0 1-.084 0Z\"></svg>", !1, !0, !1), _r = /*#__PURE__*/ m("<svg><defs><clipPath id=a><rect width=24 height=24></svg>", !1, !0, !1);
+function vr(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [gr(), _r()];
+	} }));
+}
+vr.displayName = "Heart";
+//#endregion
+//#region src/icons/home.tsx
+var yr = /*#__PURE__*/ m("<svg><path d=\"M3 9.468a1 1 0 0 1 .36-.768l8-6.667a1 1 0 0 1 1.28 0l8 6.667a1 1 0 0 1 .36.768V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z\"></svg>", !1, !0, !1), br = /*#__PURE__*/ m("<svg><path d=\"M9 21v-7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v7\"></svg>", !1, !0, !1);
+function xr(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [yr(), br()];
+	} }));
+}
+xr.displayName = "Home";
+//#endregion
+//#region src/icons/laugh.tsx
+var Sr = /*#__PURE__*/ m("<svg><path d=\"M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z\"></svg>", !1, !0, !1), Cr = /*#__PURE__*/ m("<svg><path d=\"M16.933 14.143c-2.453 5.143-7.413 5.143-9.866 0A.1.1 0 0 1 7.156 14h9.688a.1.1 0 0 1 .089.143Z\"></svg>", !1, !0, !1), wr = /*#__PURE__*/ m("<svg><path d=\"M8 10.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z\"></svg>", !1, !0, !1), Tr = /*#__PURE__*/ m("<svg><path d=\"M16 10.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z\"></svg>", !1, !0, !1);
+function Er(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Sr(),
+			Cr(),
+			wr(),
+			Tr()
+		];
+	} }));
+}
+Er.displayName = "Laugh";
+//#endregion
+//#region src/icons/layout-dashboard.tsx
+var Dr = /*#__PURE__*/ m("<svg><rect width=7 height=9 x=3 y=3 rx=0.5></svg>", !1, !0, !1), Or = /*#__PURE__*/ m("<svg><rect width=7 height=9 x=14 y=12 rx=0.5></svg>", !1, !0, !1), kr = /*#__PURE__*/ m("<svg><rect width=7 height=5 x=3 y=16 rx=0.5></svg>", !1, !0, !1), Ar = /*#__PURE__*/ m("<svg><rect width=7 height=5 x=14 y=3 rx=0.5></svg>", !1, !0, !1);
+function jr(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Dr(),
+			Or(),
+			kr(),
+			Ar()
+		];
+	} }));
+}
+jr.displayName = "LayoutDashboard";
+//#endregion
+//#region src/icons/layout-grid.tsx
+var Mr = /*#__PURE__*/ m("<svg><rect width=7 height=7 x=3 y=3 rx=0.5></svg>", !1, !0, !1), Nr = /*#__PURE__*/ m("<svg><rect width=7 height=7 x=14 y=3 rx=0.5></svg>", !1, !0, !1), Pr = /*#__PURE__*/ m("<svg><rect width=7 height=7 x=3 y=14 rx=0.5></svg>", !1, !0, !1), Fr = /*#__PURE__*/ m("<svg><rect width=7 height=7 x=14 y=14 rx=0.5></svg>", !1, !0, !1);
+function Ir(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Mr(),
+			Nr(),
+			Pr(),
+			Fr()
+		];
+	} }));
+}
+Ir.displayName = "LayoutGrid";
+//#endregion
+//#region src/icons/list-chevrons-down-up.tsx
+var Lr = /*#__PURE__*/ m("<svg><path d=\"m14 19 3.253-2.908a.38.38 0 0 1 .494 0L21 19\"></svg>", !1, !0, !1), Rr = /*#__PURE__*/ m("<svg><path d=\"M3 5h7\"></svg>", !1, !0, !1), zr = /*#__PURE__*/ m("<svg><path d=\"M3 12h7\"></svg>", !1, !0, !1), Br = /*#__PURE__*/ m("<svg><path d=\"M3 19h7\"></svg>", !1, !0, !1), Vr = /*#__PURE__*/ m("<svg><path d=\"m14 5 3.253 2.908a.38.38 0 0 0 .494 0L21 5\"></svg>", !1, !0, !1);
+function Hr(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Lr(),
+			Rr(),
+			zr(),
+			Br(),
+			Vr()
+		];
+	} }));
+}
+Hr.displayName = "ListChevronsDownUp";
+//#endregion
+//#region src/icons/list-chevrons-up-down.tsx
+var Ur = /*#__PURE__*/ m("<svg><path d=\"m14 8 3.253-2.908a.38.38 0 0 1 .494 0L21 8\"></svg>", !1, !0, !1), Wr = /*#__PURE__*/ m("<svg><path d=\"m14 16 3.253 2.908a.38.38 0 0 0 .494 0L21 16\"></svg>", !1, !0, !1), Gr = /*#__PURE__*/ m("<svg><path d=\"M3 5h7\"></svg>", !1, !0, !1), Kr = /*#__PURE__*/ m("<svg><path d=\"M3 12h7\"></svg>", !1, !0, !1), qr = /*#__PURE__*/ m("<svg><path d=\"M3 19h7\"></svg>", !1, !0, !1);
+function Jr(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Ur(),
+			Wr(),
+			Gr(),
+			Kr(),
+			qr()
+		];
+	} }));
+}
+Jr.displayName = "ListChevronsUpDown";
+//#endregion
+//#region src/icons/meh.tsx
+var Yr = /*#__PURE__*/ m("<svg><path d=\"M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z\"></svg>", !1, !0, !1), Xr = /*#__PURE__*/ m("<svg><path d=\"M7 15h10\"></svg>", !1, !0, !1), Zr = /*#__PURE__*/ m("<svg><path d=\"M8 10.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z\"></svg>", !1, !0, !1), Qr = /*#__PURE__*/ m("<svg><path d=\"M16 10.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z\"></svg>", !1, !0, !1);
+function $r(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Yr(),
+			Xr(),
+			Zr(),
+			Qr()
+		];
+	} }));
+}
+$r.displayName = "Meh";
+//#endregion
+//#region src/icons/menu-vertical.tsx
+var ei = /*#__PURE__*/ m("<svg><rect width=2 height=2 x=11 y=4 rx=1></svg>", !1, !0, !1), ti = /*#__PURE__*/ m("<svg><rect width=2 height=2 x=11 y=11 rx=1></svg>", !1, !0, !1), ni = /*#__PURE__*/ m("<svg><rect width=2 height=2 x=11 y=18 rx=1></svg>", !1, !0, !1);
+function ri(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			ei(),
+			ti(),
+			ni()
+		];
+	} }));
+}
+ri.displayName = "MenuVertical";
+//#endregion
+//#region src/icons/menu.tsx
+var ii = /*#__PURE__*/ m("<svg><path d=\"M4 5h15\"></svg>", !1, !0, !1), ai = /*#__PURE__*/ m("<svg><path d=\"M4 12h15\"></svg>", !1, !0, !1), oi = /*#__PURE__*/ m("<svg><path d=\"M4 19h15\"></svg>", !1, !0, !1);
+function si(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			ii(),
+			ai(),
+			oi()
+		];
+	} }));
+}
+si.displayName = "Menu";
+//#endregion
+//#region src/icons/mic-off.tsx
+var ci = /*#__PURE__*/ m("<svg><path d=\"M9.17 4A3.001 3.001 0 0 1 15 5v5\"></svg>", !1, !0, !1), li = /*#__PURE__*/ m("<svg><path d=\"M14 14.236A3 3 0 0 1 9 12V9\"></svg>", !1, !0, !1), ui = /*#__PURE__*/ m("<svg><path d=\"M18.839 13.5q.16-.726.161-1.5v-2\"></svg>", !1, !0, !1), di = /*#__PURE__*/ m("<svg><path d=\"M5 10v2a7 7 0 0 0 7 7m4-1.255A6.97 6.97 0 0 1 12 19m0 0v3\"></svg>", !1, !0, !1), fi = /*#__PURE__*/ m("<svg><path d=\"m2 2 20 20\"></svg>", !1, !0, !1);
+function pi(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			ci(),
+			li(),
+			ui(),
+			di(),
+			fi()
+		];
+	} }));
+}
+pi.displayName = "MicOff";
+//#endregion
+//#region src/icons/mic-vintage.tsx
+var mi = /*#__PURE__*/ m("<svg><path d=\"M9 12a3 3 0 1 0 6 0V5a3 3 0 1 0-6 0m0 7V8.5M9 12h2M9 5v3.5M9 5h2M9 8.5h2\"></svg>", !1, !0, !1), hi = /*#__PURE__*/ m("<svg><path d=\"M5 10v2a7 7 0 0 0 7 7m0 0a7 7 0 0 0 7-7v-2m-7 9v3\"></svg>", !1, !0, !1);
+function gi(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [mi(), hi()];
+	} }));
+}
+gi.displayName = "MicVintage";
+//#endregion
+//#region src/icons/mic.tsx
+var _i = /*#__PURE__*/ m("<svg><rect width=6 height=13 x=9 y=2 rx=3></svg>", !1, !0, !1), vi = /*#__PURE__*/ m("<svg><path d=\"M5 10v2a7 7 0 0 0 7 7m7-9v2a7 7 0 0 1-7 7m0 0v3\"></svg>", !1, !0, !1);
+function yi(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [_i(), vi()];
+	} }));
+}
+yi.displayName = "Mic";
+//#endregion
+//#region src/icons/moon.tsx
+var bi = /*#__PURE__*/ m("<svg><path d=\"M12 21c4.567 0 7.917-3.376 8.819-7.802.125-.616-.406-1.142-1.034-1.117-8.525.34-8.443-4.734-7.975-7.918.09-.611-.375-1.167-.988-1.087A9.002 9.002 0 0 0 12 21Z\"></svg>", !1, !0, !1);
+function xi(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return bi();
+	} }));
+}
+xi.displayName = "Moon";
+//#endregion
+//#region src/icons/notification.tsx
+var Si = /*#__PURE__*/ m("<svg><path d=\"M5 9a7 7 0 0 1 14 0v4.056a4 4 0 0 0 .422 1.789l1.156 2.31a4 4 0 0 1 .422 1.79V19H3v-.056a4 4 0 0 1 .422-1.789l1.156-2.31A4 4 0 0 0 5 13.055z\"></svg>", !1, !0, !1), Ci = /*#__PURE__*/ m("<svg><path d=\"M10 22h4\"></svg>", !1, !0, !1);
+function wi(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [Si(), Ci()];
+	} }));
+}
+wi.displayName = "Notification";
+//#endregion
+//#region src/icons/paperclip.tsx
+var Ti = /*#__PURE__*/ m("<svg><path d=\"M10 6.21v9.58a2 2 0 0 0 4 0V6a4 4 0 0 0-8 0v10a6 6 0 0 0 12 0V6.21\"></svg>", !1, !0, !1);
+function Ei(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return Ti();
+	} }));
+}
+Ei.displayName = "Paperclip";
+//#endregion
+//#region src/icons/pen-line.tsx
+var Di = /*#__PURE__*/ m("<svg><g clip-path=url(#a)><path d=\"M8.214 20.064 21.116 6.412a2.737 2.737 0 1 0-3.979-3.76L4.19 16.351q-.114.123-.184.275l-2.277 5.03a.5.5 0 0 0 .628.675l5.477-2.016a1 1 0 0 0 .381-.252Z\"></path><path d=\"M12 21h9\"></svg>", !1, !0, !1), Oi = /*#__PURE__*/ m("<svg><defs><clipPath id=a><rect width=24 height=24></svg>", !1, !0, !1);
+function ki(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [Di(), Oi()];
+	} }));
+}
+ki.displayName = "PenLine";
+//#endregion
+//#region src/icons/phone-forward.tsx
+var Ai = /*#__PURE__*/ m("<svg><path d=\"M7.362 2h-4.23a.966.966 0 0 0-.964.819c-1.062 7.066 2.651 17.334 18.73 19.175.587.067 1.102-.408 1.102-1.012v-5.153c0-.533-.398-.978-.918-1.027l-4.306-.4a1 1 0 0 0-.61.143l-2.154 1.32a.18.18 0 0 1-.18.007 18.8 18.8 0 0 1-6.593-5.62L6.95 9.86a.215.215 0 0 1 0-.254l1.219-1.66c.131-.179.202-.396.202-.62V3.032A1.02 1.02 0 0 0 7.362 2Z\"></svg>", !1, !0, !1), ji = /*#__PURE__*/ m("<svg><path d=\"M13 6h7\"></svg>", !1, !0, !1), Mi = /*#__PURE__*/ m("<svg><path d=\"m18 2 3.824 3.6c.235.22.235.58 0 .8L18 10\"></svg>", !1, !0, !1);
+function Ni(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Ai(),
+			ji(),
+			Mi()
+		];
+	} }));
+}
+Ni.displayName = "PhoneForward";
+//#endregion
+//#region src/icons/phone-incoming.tsx
+var Pi = /*#__PURE__*/ m("<svg><path d=\"M7.362 2h-4.23a.966.966 0 0 0-.964.819c-1.062 7.066 2.651 17.334 18.73 19.175.587.067 1.102-.408 1.102-1.012v-5.153c0-.533-.398-.978-.918-1.027l-4.306-.4a1 1 0 0 0-.61.143l-2.154 1.32a.18.18 0 0 1-.18.007 18.8 18.8 0 0 1-6.593-5.62L6.95 9.86a.215.215 0 0 1 0-.254l1.219-1.66c.131-.179.202-.396.202-.62V3.032A1.02 1.02 0 0 0 7.362 2Z\"></svg>", !1, !0, !1), Fi = /*#__PURE__*/ m("<svg><path d=\"M16 2v5a1 1 0 0 0 1 1h5\"></svg>", !1, !0, !1), Ii = /*#__PURE__*/ m("<svg><path d=\"m17 7 5-5\"></svg>", !1, !0, !1);
+function Li(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Pi(),
+			Fi(),
+			Ii()
+		];
+	} }));
+}
+Li.displayName = "PhoneIncoming";
+//#endregion
+//#region src/icons/phone-outgoing.tsx
+var Ri = /*#__PURE__*/ m("<svg><path d=\"M7.362 2h-4.23a.966.966 0 0 0-.964.819c-1.062 7.066 2.651 17.334 18.73 19.175.587.067 1.102-.408 1.102-1.012v-5.153c0-.533-.398-.978-.918-1.027l-4.306-.4a1 1 0 0 0-.61.143l-2.154 1.32a.18.18 0 0 1-.18.007 18.8 18.8 0 0 1-6.593-5.62L6.95 9.86a.215.215 0 0 1 0-.254l1.219-1.66c.131-.179.202-.396.202-.62V3.032A1.02 1.02 0 0 0 7.362 2Z\"></svg>", !1, !0, !1), zi = /*#__PURE__*/ m("<svg><path d=\"M22 8V3a1 1 0 0 0-1-1h-5\"></svg>", !1, !0, !1), Bi = /*#__PURE__*/ m("<svg><path d=\"m21 3-5 5\"></svg>", !1, !0, !1);
+function Vi(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Ri(),
+			zi(),
+			Bi()
+		];
+	} }));
+}
+Vi.displayName = "PhoneOutgoing";
+//#endregion
+//#region src/icons/phone-x.tsx
+var Hi = /*#__PURE__*/ m("<svg><path d=\"M7.5 2.5H3.308a.95.95 0 0 0-.954.794c-1.052 6.854 2.627 16.813 18.554 18.598A.987.987 0 0 0 22 20.911v-4.998a1 1 0 0 0-.91-.996l-4.265-.387a1 1 0 0 0-.605.138l-2.133 1.28a.19.19 0 0 1-.178.006 18.5 18.5 0 0 1-6.531-5.45l-.286-.38a.205.205 0 0 1 0-.247L8.3 8.267a1 1 0 0 0 .2-.6V3.5a1 1 0 0 0-1-1Z\"></svg>", !1, !0, !1), Ui = /*#__PURE__*/ m("<svg><path d=\"m15 3 6 6\"></svg>", !1, !0, !1), Wi = /*#__PURE__*/ m("<svg><path d=\"m21 3-6 6\"></svg>", !1, !0, !1);
+function Gi(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Hi(),
+			Ui(),
+			Wi()
+		];
+	} }));
+}
+Gi.displayName = "PhoneX";
+//#endregion
+//#region src/icons/phone.tsx
+var Ki = /*#__PURE__*/ m("<svg><path d=\"M7.5 2.5H3.308a.95.95 0 0 0-.954.794c-1.052 6.854 2.627 16.813 18.554 18.598A.987.987 0 0 0 22 20.911v-4.998a1 1 0 0 0-.91-.996l-4.265-.387a1 1 0 0 0-.605.138l-2.133 1.28a.19.19 0 0 1-.178.006 18.5 18.5 0 0 1-6.531-5.45l-.286-.38a.205.205 0 0 1 0-.247L8.3 8.267a1 1 0 0 0 .2-.6V3.5a1 1 0 0 0-1-1Z\"></svg>", !1, !0, !1);
+function qi(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return Ki();
+	} }));
+}
+qi.displayName = "Phone";
+//#endregion
+//#region src/icons/pie-chart.tsx
+var Ji = /*#__PURE__*/ m("<svg><path d=\"M21.996 13.107Q22 12.954 22 12.8C22 6.835 17.165 2 11.2 2q-.154 0-.307.004c-.51.014-.893.448-.893.957V13a1 1 0 0 0 1 1h10.039c.51 0 .942-.384.957-.893Z\"></svg>", !1, !0, !1), Yi = /*#__PURE__*/ m("<svg><path d=\"M20 17.632A9.82 9.82 0 0 1 11.827 22C6.4 22 2 17.6 2 12.173A9.82 9.82 0 0 1 6.368 4\"></svg>", !1, !0, !1);
+function Xi(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [Ji(), Yi()];
+	} }));
+}
+Xi.displayName = "PieChart";
+//#endregion
+//#region src/icons/play.tsx
+var Zi = /*#__PURE__*/ m("<svg><path d=\"M5 20.152v-16.5a1 1 0 0 1 1.463-.887L20.49 10.1a1 1 0 0 1 .084 1.723L6.547 20.989A1 1 0 0 1 5 20.152Z\"></svg>", !1, !0, !1);
+function Qi(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return Zi();
+	} }));
+}
+Qi.displayName = "Play";
+//#endregion
+//#region src/icons/plus.tsx
+var $i = /*#__PURE__*/ m("<svg><path d=\"M12 5v14\"></svg>", !1, !0, !1), ea = /*#__PURE__*/ m("<svg><path d=\"M5 12h14\"></svg>", !1, !0, !1);
+function ta(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [$i(), ea()];
+	} }));
+}
+ta.displayName = "Plus";
+//#endregion
+//#region src/icons/search.tsx
+var na = /*#__PURE__*/ m("<svg><circle cx=11 cy=11 r=8></svg>", !1, !0, !1), ra = /*#__PURE__*/ m("<svg><path d=\"M16.947 17.054 21 21\"></svg>", !1, !0, !1);
+function ia(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [na(), ra()];
+	} }));
+}
+ia.displayName = "Search";
+//#endregion
+//#region src/icons/send.tsx
+var aa = /*#__PURE__*/ m("<svg><path d=\"M21.693 12.478 2.778 21.002a.5.5 0 0 1-.69-.576l2.042-8.284a.5.5 0 0 0 0-.24L2.087 3.619a.5.5 0 0 1 .691-.575l18.915 8.523a.5.5 0 0 1 0 .912Z\"></svg>", !1, !0, !1), oa = /*#__PURE__*/ m("<svg><path d=\"M4.16 12.022h17.386\"></svg>", !1, !0, !1);
+function sa(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [aa(), oa()];
+	} }));
+}
+sa.displayName = "Send";
+//#endregion
+//#region src/icons/settings-control.tsx
+var ca = /*#__PURE__*/ m("<svg><path d=\"M10 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm0 0h9\"></svg>", !1, !0, !1), la = /*#__PURE__*/ m("<svg><path d=\"M14 17a3 3 0 1 0 6 0 3 3 0 0 0-6 0Zm0 0H5\"></svg>", !1, !0, !1);
+function ua(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [ca(), la()];
+	} }));
+}
+ua.displayName = "SettingsControl";
+//#endregion
+//#region src/icons/settings.tsx
+var da = /*#__PURE__*/ m("<svg><path d=\"M12.8 22h-1.6a1 1 0 0 1-1-1v-1.82c0-1.586-1.757-2.541-3.088-1.679l-1.334.865a1 1 0 0 1-1.456-.428l-.945-2.1a1 1 0 0 1 .426-1.284l1.45-.806c1.372-.762 1.372-2.734 0-3.496l-1.45-.806a1 1 0 0 1-.426-1.284l.945-2.1a1 1 0 0 1 1.456-.428l1.334.865c1.33.862 3.088-.093 3.088-1.679V3a1 1 0 0 1 1-1h1.6a1 1 0 0 1 1 1v1.82c0 1.586 1.757 2.541 3.088 1.679l1.334-.865a1 1 0 0 1 1.456.428l.945 2.1a1 1 0 0 1-.427 1.284l-1.449.806c-1.372.762-1.372 2.734 0 3.496l1.45.806a1 1 0 0 1 .426 1.284l-.945 2.1a1 1 0 0 1-1.456.428l-1.334-.865c-1.33-.862-3.088.093-3.088 1.679V21a1 1 0 0 1-1 1Z\"></svg>", !1, !0, !1), fa = /*#__PURE__*/ m("<svg><circle cx=12 cy=12 r=3></svg>", !1, !0, !1);
+function pa(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [da(), fa()];
+	} }));
+}
+pa.displayName = "Settings";
+//#endregion
+//#region src/icons/shield-check.tsx
+var ma = /*#__PURE__*/ m("<svg><path d=\"M4 5.256a.23.23 0 0 1 .227-.229c2.45-.018 4.83-.82 6.791-2.29l.808-.606a.29.29 0 0 1 .348 0l.808.605a11.45 11.45 0 0 0 6.79 2.291.23.23 0 0 1 .228.229v6.712a10.29 10.29 0 0 1-7.977 10.027.1.1 0 0 1-.046 0A10.29 10.29 0 0 1 4 11.968V5.256Z\"></svg>", !1, !0, !1), ha = /*#__PURE__*/ m("<svg><path d=\"m9 12 1.741 1.625a.5.5 0 0 0 .737-.06L15 9\"></svg>", !1, !0, !1);
+function ga(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [ma(), ha()];
+	} }));
+}
+ga.displayName = "ShieldCheck";
+//#endregion
+//#region src/icons/shopping-bag.tsx
+var _a = /*#__PURE__*/ m("<svg><path d=\"m21 6-2.7-3.6a1 1 0 0 0-.8-.4h-11a1 1 0 0 0-.8.4L3 6v15a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1zM3 6h18\"></svg>", !1, !0, !1), va = /*#__PURE__*/ m("<svg><path d=\"M16 10a4 4 0 0 1-8 0\"></svg>", !1, !0, !1);
+function ya(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [_a(), va()];
+	} }));
+}
+ya.displayName = "ShoppingBag";
+//#endregion
+//#region src/icons/sliders-horizontal.tsx
+var ba = /*#__PURE__*/ m("<svg><path d=\"M3 5h7\"></svg>", !1, !0, !1), xa = /*#__PURE__*/ m("<svg><path d=\"M14 5V3m0 2v2m0-2h7\"></svg>", !1, !0, !1), Sa = /*#__PURE__*/ m("<svg><path d=\"M8 12v-2m0 2v2m0-2H3\"></svg>", !1, !0, !1), Ca = /*#__PURE__*/ m("<svg><path d=\"M12 12h9\"></svg>", !1, !0, !1), wa = /*#__PURE__*/ m("<svg><path d=\"M3 19h9\"></svg>", !1, !0, !1), Ta = /*#__PURE__*/ m("<svg><path d=\"M16 19v-2m0 2v2m0-2h5\"></svg>", !1, !0, !1);
+function Ea(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			ba(),
+			xa(),
+			Sa(),
+			Ca(),
+			wa(),
+			Ta()
+		];
+	} }));
+}
+Ea.displayName = "SlidersHorizontal";
+//#endregion
+//#region src/icons/sliders-vertical.tsx
+var Da = /*#__PURE__*/ m("<svg><path d=\"M5 3v7\"></svg>", !1, !0, !1), Oa = /*#__PURE__*/ m("<svg><path d=\"M5 14v7m0-7H3m2 0h2\"></svg>", !1, !0, !1), ka = /*#__PURE__*/ m("<svg><path d=\"M12 8h2m-2 0h-2m2 0V3\"></svg>", !1, !0, !1), Aa = /*#__PURE__*/ m("<svg><path d=\"M12 12v9\"></svg>", !1, !0, !1), ja = /*#__PURE__*/ m("<svg><path d=\"M19 3v9\"></svg>", !1, !0, !1), Ma = /*#__PURE__*/ m("<svg><path d=\"M19 16h2m-2 0h-2m2 0v5\"></svg>", !1, !0, !1);
+function Na(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Da(),
+			Oa(),
+			ka(),
+			Aa(),
+			ja(),
+			Ma()
+		];
+	} }));
+}
+Na.displayName = "SlidersVertical";
+//#endregion
+//#region src/icons/smile-plus.tsx
+var Pa = /*#__PURE__*/ m("<svg><path d=\"M21.95 11q.05.493.05 1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2q.507 0 1 .05\"></svg>", !1, !0, !1), Fa = /*#__PURE__*/ m("<svg><path d=\"M7 15c2.45 3.43 7.55 3.43 10 0\"></svg>", !1, !0, !1), Ia = /*#__PURE__*/ m("<svg><path d=\"M8 10.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z\"></svg>", !1, !0, !1), La = /*#__PURE__*/ m("<svg><path d=\"M16 10.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z\"></svg>", !1, !0, !1), Ra = /*#__PURE__*/ m("<svg><path d=\"M19 2v6\"></svg>", !1, !0, !1), za = /*#__PURE__*/ m("<svg><path d=\"M16 5h6\"></svg>", !1, !0, !1);
+function Ba(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Pa(),
+			Fa(),
+			Ia(),
+			La(),
+			Ra(),
+			za()
+		];
+	} }));
+}
+Ba.displayName = "SmilePlus";
+//#endregion
+//#region src/icons/smile.tsx
+var Va = /*#__PURE__*/ m("<svg><circle cx=12 cy=12 r=10></svg>", !1, !0, !1), Ha = /*#__PURE__*/ m("<svg><path d=\"M7 15c2.45 3.43 7.55 3.43 10 0\"></svg>", !1, !0, !1), Ua = /*#__PURE__*/ m("<svg><circle cx=8 cy=10 r=0.5></svg>", !1, !0, !1), Wa = /*#__PURE__*/ m("<svg><circle cx=16 cy=10 r=0.5></svg>", !1, !0, !1);
+function Ga(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Va(),
+			Ha(),
+			Ua(),
+			Wa()
+		];
+	} }));
+}
+Ga.displayName = "Smile";
+//#endregion
+//#region src/icons/square-arrow-out-up-left.tsx
+var Ka = /*#__PURE__*/ m("<svg><path d=\"M3 9V3.5a.5.5 0 0 1 .5-.5H9\"></svg>", !1, !0, !1), qa = /*#__PURE__*/ m("<svg><path d=\"m4 4 8 8\"></svg>", !1, !0, !1), Ja = /*#__PURE__*/ m("<svg><path d=\"M3 13v7.5a.5.5 0 0 0 .5.5h17a.5.5 0 0 0 .5-.5v-17a.5.5 0 0 0-.5-.5H13\"></svg>", !1, !0, !1);
+function Ya(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Ka(),
+			qa(),
+			Ja()
+		];
+	} }));
+}
+Ya.displayName = "SquareArrowOutUpLeft";
+//#endregion
+//#region src/icons/square-arrow-out-up-right.tsx
+var Xa = /*#__PURE__*/ m("<svg><path d=\"M21 13v7.5a.5.5 0 0 1-.5.5h-17a.5.5 0 0 1-.5-.5v-17a.5.5 0 0 1 .5-.5H11\"></svg>", !1, !0, !1), Za = /*#__PURE__*/ m("<svg><path d=\"M15 3h5.5a.5.5 0 0 1 .5.5V9\"></svg>", !1, !0, !1), Qa = /*#__PURE__*/ m("<svg><path d=\"m12 12 8-8\"></svg>", !1, !0, !1);
+function $a(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Xa(),
+			Za(),
+			Qa()
+		];
+	} }));
+}
+$a.displayName = "SquareArrowOutUpRight";
+//#endregion
+//#region src/icons/square-arrow-up-left.tsx
+var eo = /*#__PURE__*/ m("<svg><path d=\"m10 10 5 5\"></svg>", !1, !0, !1), to = /*#__PURE__*/ m("<svg><path d=\"M20.5 21h-17a.5.5 0 0 1-.5-.5v-17a.5.5 0 0 1 .5-.5h17a.5.5 0 0 1 .5.5v17a.5.5 0 0 1-.5.5Z\"></svg>", !1, !0, !1), no = /*#__PURE__*/ m("<svg><path d=\"M9 15V9.5a.5.5 0 0 1 .5-.5H15\"></svg>", !1, !0, !1);
+function ro(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			eo(),
+			to(),
+			no()
+		];
+	} }));
+}
+ro.displayName = "SquareArrowUpLeft";
+//#endregion
+//#region src/icons/square-arrow-up-right.tsx
+var io = /*#__PURE__*/ m("<svg><path d=\"M9 9h5.7a.3.3 0 0 1 .3.3V15\"></svg>", !1, !0, !1), ao = /*#__PURE__*/ m("<svg><path d=\"m9 15 5-5\"></svg>", !1, !0, !1), oo = /*#__PURE__*/ m("<svg><path d=\"M20.5 21h-17a.5.5 0 0 1-.5-.5v-17a.5.5 0 0 1 .5-.5h17a.5.5 0 0 1 .5.5v17a.5.5 0 0 1-.5.5Z\"></svg>", !1, !0, !1);
+function $(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			io(),
+			ao(),
+			oo()
+		];
+	} }));
+}
+$.displayName = "SquareArrowUpRight";
+//#endregion
+//#region src/icons/square-chevron-down.tsx
+var so = /*#__PURE__*/ m("<svg><path d=\"m8 10 3.764 3.899c.13.135.341.135.472 0L16 10\"></svg>", !1, !0, !1), co = /*#__PURE__*/ m("<svg><rect width=18 height=18 x=3 y=3 rx=1.5></svg>", !1, !0, !1);
+function lo(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [so(), co()];
+	} }));
+}
+lo.displayName = "SquareChevronDown";
+//#endregion
+//#region src/icons/square-chevron-up.tsx
+var uo = /*#__PURE__*/ m("<svg><path d=\"m8 14 3.646-3.646a.5.5 0 0 1 .708 0L16 14\"></svg>", !1, !0, !1), fo = /*#__PURE__*/ m("<svg><rect width=18 height=18 x=3 y=3 rx=1></svg>", !1, !0, !1);
+function po(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [uo(), fo()];
+	} }));
+}
+po.displayName = "SquareChevronUp";
+//#endregion
+//#region src/icons/star.tsx
+var mo = /*#__PURE__*/ m("<svg><path d=\"M11.952 2.146a.05.05 0 0 1 .096 0l2.41 7.42a.05.05 0 0 0 .048.035h7.802a.05.05 0 0 1 .03.09l-6.313 4.586a.05.05 0 0 0-.018.056l2.411 7.42a.05.05 0 0 1-.077.056l-6.312-4.586a.05.05 0 0 0-.058 0l-6.312 4.586a.05.05 0 0 1-.077-.056l2.41-7.42a.05.05 0 0 0-.017-.056L1.663 9.691a.05.05 0 0 1 .03-.09h7.801a.05.05 0 0 0 .048-.035z\"></svg>", !1, !0, !1);
+function ho(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return mo();
+	} }));
+}
+ho.displayName = "Star";
+//#endregion
+//#region src/icons/swap-horizontal.tsx
+var go = /*#__PURE__*/ m("<svg><path d=\"M8 3 4.13 6.798c-.173.112-.173.292 0 .404L8 11\"></svg>", !1, !0, !1), _o = /*#__PURE__*/ m("<svg><path d=\"M6 7h14\"></svg>", !1, !0, !1), vo = /*#__PURE__*/ m("<svg><path d=\"m16 13 3.646 3.646a.5.5 0 0 1 0 .708L16 21\"></svg>", !1, !0, !1), yo = /*#__PURE__*/ m("<svg><path d=\"M4 17h14\"></svg>", !1, !0, !1);
+function bo(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			go(),
+			_o(),
+			vo(),
+			yo()
+		];
+	} }));
+}
+bo.displayName = "SwapHorizontal";
+//#endregion
+//#region src/icons/swap-vertical.tsx
+var xo = /*#__PURE__*/ m("<svg><path d=\"M7 4v14\"></svg>", !1, !0, !1), So = /*#__PURE__*/ m("<svg><path d=\"m3 16 3.646 3.646a.5.5 0 0 0 .708 0L11 16\"></svg>", !1, !0, !1), Co = /*#__PURE__*/ m("<svg><path d=\"m13 8 3.646-3.646a.5.5 0 0 1 .708 0L21 8\"></svg>", !1, !0, !1), wo = /*#__PURE__*/ m("<svg><path d=\"M17 6v14\"></svg>", !1, !0, !1);
+function To(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			xo(),
+			So(),
+			Co(),
+			wo()
+		];
+	} }));
+}
+To.displayName = "SwapVertical";
+//#endregion
+//#region src/icons/thumbs-down.tsx
+var Eo = /*#__PURE__*/ m("<svg><path d=\"M17 14h4a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-4m0 12h-.265a1 1 0 0 0-.954.702l-2.165 6.928a.37.37 0 0 1-.48.238 4.07 4.07 0 0 1-2.656-3.392l-.393-3.665A.907.907 0 0 0 9.185 14H3.18a1 1 0 0 1-.986-1.164l1.667-10A1 1 0 0 1 4.847 2H17m0 12V2\"></svg>", !1, !0, !1);
+function Do(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return Eo();
+	} }));
+}
+Do.displayName = "ThumbsDown";
+//#endregion
+//#region src/icons/thumbs-up.tsx
+var Oo = /*#__PURE__*/ m("<svg><path d=\"M7 10H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h4m0-12h.265a1 1 0 0 0 .954-.702l2.165-6.928a.37.37 0 0 1 .48-.238 4.07 4.07 0 0 1 2.656 3.392l.393 3.665c.05.461.439.811.902.811h6.005a1 1 0 0 1 .986 1.164l-1.667 10a1 1 0 0 1-.986.836H7m0-12v12\"></svg>", !1, !0, !1);
+function ko(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return Oo();
+	} }));
+}
+ko.displayName = "ThumbsUp";
+//#endregion
+//#region src/icons/trash-2.tsx
+var Ao = /*#__PURE__*/ m("<svg><path d=\"M3 6h2m0 0h3M5 6v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6m2 0h-2m0 0h-3M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M8 6h8\"></svg>", !1, !0, !1), jo = /*#__PURE__*/ m("<svg><path d=\"M10 11v6\"></svg>", !1, !0, !1), Mo = /*#__PURE__*/ m("<svg><path d=\"M14 11v6\"></svg>", !1, !0, !1);
+function No(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Ao(),
+			jo(),
+			Mo()
+		];
+	} }));
+}
+No.displayName = "Trash2";
+//#endregion
+//#region src/icons/trash.tsx
+var Po = /*#__PURE__*/ m("<svg><path d=\"M3 6h2m16 0h-2M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M8 6h8M8 6H5m11 0h3M5 6v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6\"></svg>", !1, !0, !1);
+function Fo(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return Po();
+	} }));
+}
+Fo.displayName = "Trash";
+//#endregion
+//#region src/icons/user-check.tsx
+var Io = /*#__PURE__*/ m("<svg><circle cx=10 cy=8 r=5></svg>", !1, !0, !1), Lo = /*#__PURE__*/ m("<svg><path d=\"M15 14.755A8 8 0 0 0 2 21\"></svg>", !1, !0, !1), Ro = /*#__PURE__*/ m("<svg><path d=\"m16 19.333 1.608 1.34a.5.5 0 0 0 .71-.071L22 16\"></svg>", !1, !0, !1);
+function zo(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Io(),
+			Lo(),
+			Ro()
+		];
+	} }));
+}
+zo.displayName = "UserCheck";
+//#endregion
+//#region src/icons/user.tsx
+var Bo = /*#__PURE__*/ m("<svg><circle cx=12 cy=8 r=5></svg>", !1, !0, !1), Vo = /*#__PURE__*/ m("<svg><path d=\"M20 21a8 8 0 1 0-16 0\"></svg>", !1, !0, !1);
+function Ho(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [Bo(), Vo()];
+	} }));
+}
+Ho.displayName = "User";
+//#endregion
+//#region src/icons/users.tsx
+var Uo = /*#__PURE__*/ m("<svg><circle cx=10 cy=8 r=5></svg>", !1, !0, !1), Wo = /*#__PURE__*/ m("<svg><path d=\"M18 21a8 8 0 1 0-16 0\"></svg>", !1, !0, !1), Go = /*#__PURE__*/ m("<svg><path d=\"M18 4c.833 1.333 2 4.9 0 8.5\"></svg>", !1, !0, !1), Ko = /*#__PURE__*/ m("<svg><path d=\"M18 12.5c1.5 1.333 4.4 4.9 4 8.5\"></svg>", !1, !0, !1);
+function qo(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Uo(),
+			Wo(),
+			Go(),
+			Ko()
+		];
+	} }));
+}
+qo.displayName = "Users";
+//#endregion
+//#region src/icons/video-camera.tsx
+var Jo = /*#__PURE__*/ m("<svg><path d=\"M14.214 7H4.786C4.352 7 4 7.336 4 7.75v7.5c0 .414.352.75.786.75h9.428c.434 0 .786-.336.786-.75v-7.5c0-.414-.352-.75-.786-.75Z\"></svg>", !1, !0, !1), Yo = /*#__PURE__*/ m("<svg><path d=\"m15 12.105 3.704 1.792c.554.268 1.296-.02 1.296-.503V9.606c0-.483-.742-.771-1.296-.503L15 10.895\"></svg>", !1, !0, !1), Xo = /*#__PURE__*/ m("<svg><path d=\"m7 21 2.143-3.57a1 1 0 0 1 1.714 0L13 21\"></svg>", !1, !0, !1), Zo = /*#__PURE__*/ m("<svg><circle cx=6.5 cy=3.5 r=1.5></svg>", !1, !0, !1), Qo = /*#__PURE__*/ m("<svg><circle cx=11.5 cy=3.5 r=1.5></svg>", !1, !0, !1);
+function $o(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [
+			Jo(),
+			Yo(),
+			Xo(),
+			Zo(),
+			Qo()
+		];
+	} }));
+}
+$o.displayName = "VideoCamera";
+//#endregion
+//#region src/icons/video.tsx
+var es = /*#__PURE__*/ m("<svg><rect width=14 height=12 x=2 y=6 rx=1></svg>", !1, !0, !1), ts = /*#__PURE__*/ m("<svg><path d=\"m16 13 4.445 2.964A1 1 0 0 0 22 15.131V8.869a1 1 0 0 0-1.555-.833L16 11\"></svg>", !1, !0, !1);
+function ns(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [es(), ts()];
+	} }));
+}
+ns.displayName = "Video";
+//#endregion
+//#region src/icons/x.tsx
+var rs = /*#__PURE__*/ m("<svg><path d=\"m6 6 12 12\"></svg>", !1, !0, !1), is = /*#__PURE__*/ m("<svg><path d=\"M18 6 6 18\"></svg>", !1, !0, !1);
+function as(t) {
+	return e(S, n({
+		get size() {
+			return t.size ?? 24;
+		},
+		get color() {
+			return t.color ?? "currentColor";
+		},
+		get strokeWidth() {
+			return t.strokeWidth ?? 2;
+		}
+	}, t, { get children() {
+		return [rs(), is()];
+	} }));
+}
+as.displayName = "X";
+//#endregion
+export { C as Alert, w as Angry, T as Annoyed, O as ArrowLeft, E as ArrowLeftFromLine, D as ArrowLeftToLine, k as ArrowRightFromLine, A as ArrowRightToLine, j as ArrowUpLeft, M as ArrowUpRight, N as BarChart, P as BellRing, F as Bookmark, z as Calendar, I as CalendarCheck, L as CalendarDays, R as CalendarX, B as Chat, V as Check, H as ChevronDown, U as ChevronUp, G as ChevronsDown, W as ChevronsDownUp, q as ChevronsUp, K as ChevronsUpDown, J as CircleArrowLeft, Y as CircleArrowOutUpLeft, X as CircleArrowOutUpRight, Z as CircleChevronDown, Q as CircleChevronUp, an as ClockArrowLeft, mn as ColumnChart, ln as ColumnChartPlainIncreasing, gn as CreditCard, bn as Download, Cn as DraftBook, Dn as ExternalLink, Ln as Eye, Nn as EyeClosed, Bn as File, Hn as Folder, qn as Frown, lr as Grid2x2, $n as Grid2x2Plus, ar as Grid2x2X, hr as Grid3x3, vr as Heart, xr as Home, Er as Laugh, jr as LayoutDashboard, Ir as LayoutGrid, Hr as ListChevronsDownUp, Jr as ListChevronsUpDown, $r as Meh, si as Menu, ri as MenuVertical, yi as Mic, pi as MicOff, gi as MicVintage, xi as Moon, wi as Notification, Ei as Paperclip, ki as PenLine, qi as Phone, Ni as PhoneForward, Li as PhoneIncoming, Vi as PhoneOutgoing, Gi as PhoneX, Xi as PieChart, Qi as Play, ta as Plus, ia as Search, sa as Send, pa as Settings, ua as SettingsControl, ga as ShieldCheck, ya as ShoppingBag, Ea as SlidersHorizontal, Na as SlidersVertical, Ga as Smile, Ba as SmilePlus, Ya as SquareArrowOutUpLeft, $a as SquareArrowOutUpRight, ro as SquareArrowUpLeft, $ as SquareArrowUpRight, lo as SquareChevronDown, po as SquareChevronUp, ho as Star, bo as SwapHorizontal, To as SwapVertical, Do as ThumbsDown, ko as ThumbsUp, Fo as Trash, No as Trash2, Ho as User, zo as UserCheck, qo as Users, ns as Video, $o as VideoCamera, as as X };
 
 //# sourceMappingURL=index.js.map

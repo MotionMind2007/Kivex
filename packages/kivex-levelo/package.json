@@ -1,0 +1,57 @@
+{
+  "name": "kivex-levelo",
+  "version": "1.2.0",
+  "description": "The official LeveloJS component library for Kivex Icons.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "generate": "node scripts/build.js",
+    "bundle": "tsup",
+    "types": "tsc -p tsconfig.types.json",
+    "build": "pnpm run bundle && pnpm run types",
+    "prepublishOnly": "pnpm run generate && pnpm run build"
+  },
+  "keywords": [
+    "motion-icons",
+    "LeveloJS",
+    "kivex",
+    "kivex-icons",
+    "kivex-levelo",
+    "open-source",
+    "icon-library",
+    "dynamic-icons",
+    "icon",
+    "ui"
+  ],
+  "author": "MotionMind2007",
+  "license": "MIT",
+  "devDependencies": {
+    "svgson": "^5.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MotionMind2007/Kivex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MotionMind2007/Kivex/issues"
+  },
+  "homepage": "https://github.com/MotionMind2007/Kivex#readme"
+}

@@ -1,7 +1,5 @@
 {
     "compilerOptions": {
-        "ignoreDeprecations": "6.0",
-        "baseUrl": ".",
         "target": "ES2022",
         "module": "ESNext",
         "jsx": "react-jsx",
@@ -11,7 +9,8 @@
         "moduleResolution": "bundler",
         "erasableSyntaxOnly": true,
         "skipLibCheck": true,
-        "isolatedModules": true
+        "isolatedModules": true,
+        "preserveSymlinks": true,
     },
     "include": [
         "src",

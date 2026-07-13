@@ -68,9 +68,9 @@ export async function generateIcons(options?: { force?: boolean }): Promise<void
     const outputFile = path.join(OUTPUT_DIRECTORY, `${fileName}.tsx`);
     const written = await writeFileIfChanged(outputFile, finalCode, force);
     if (written) {
-      console.log(`✅ Generated or updated ${fileName}.tsx`);
+      console.log(`Generated or updated ${fileName}.tsx`);
     } else {
-      console.log(`⏭️ Skipped ${fileName}.tsx (unchanged)`);
+      console.log(`Skipped ${fileName}.tsx (unchanged)`);
     }
 
     generatedComponents.push(fileName);
@@ -86,7 +86,7 @@ export async function generateIcons(options?: { force?: boolean }): Promise<void
     if (!generatedComponents.includes(baseName)) {
       const filePath = path.join(OUTPUT_DIRECTORY, file);
       await fs.remove(filePath);
-      console.log(`🗑️ Removed orphaned ${file}`);
+      console.log(`Removed orphaned ${file}`);
     }
   }
 
@@ -99,9 +99,9 @@ export async function generateIcons(options?: { force?: boolean }): Promise<void
   const mainIndexPath = path.join(ROOT_DIRECTORY, 'src', 'index.ts');
   const written = await writeFileIfChanged(mainIndexPath, mainIndexContent, force);
   if (written) {
-    console.log(`📝 Main entry updated at ${mainIndexPath}`);
+    console.log(`Main entry updated at ${mainIndexPath}`);
   } else {
-    console.log(`⏭️ Skipped ${mainIndexPath} (unchanged)`);
+    console.log(`Skipped ${mainIndexPath} (unchanged)`);
   }
 
   console.log('✨ Done!');

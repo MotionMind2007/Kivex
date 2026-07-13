@@ -1,5 +1,9 @@
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { writeFileIfChanged } from './build';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export function generateIndexCode(force: boolean): void {
     const indexPath = path.join(__dirname, "../src/index.ts");

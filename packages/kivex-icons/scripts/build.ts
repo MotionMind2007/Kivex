@@ -2,10 +2,14 @@
 import path from 'path';
 import fg from 'fast-glob';
 import fs from 'fs-extra';
+import { fileURLToPath } from 'url';
 import { generateIconCode } from './IconTemplate';
 import { generateIndexCode } from './generateIndex';
 
 import { optimize } from "svgo";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export async function writeFileIfChanged(
     filePath: string,

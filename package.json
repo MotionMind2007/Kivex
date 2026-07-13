@@ -1,10 +1,22 @@
 {
   "name": "kivex-monorepo",
   "private": true,
-  "description": "<p align=\"center\">\r   <img src=\"assets/motion-icons-logo.png\" alt=\"Motion Icons Logo\" width=\"150\"/>\r </p>",
+  "description": "The official monorepo for Kivex Ecosystem - a lightweight, pixel-perfect, and dynamic SVG icon library for JavaScript and modern frameworks.",
   "main": "index.js",
   "scripts": {
-    "polished-svg": "tsx scripts/process-svg.ts"
+    "polished-svg": "tsx scripts/process-svg.ts",
+
+    "gen:core": "pnpm --filter kivex-icons generate",
+    "gen:react": "pnpm --filter kivex-react generate",
+    "gen:levelo": "pnpm --filter kivex-levelo generate",
+    "gen:solid": "pnpm --filter kivex-solid generate",
+    "gen:all": "pnpm --filter \"kivex-*\" generate",
+
+    "build:core": "pnpm --filter kivex-icons build",
+    "build:react": "pnpm --filter kivex-react build",
+    "build:levelo": "pnpm --filter kivex-levelo build",
+    "build:solid": "pnpm --filter kivex-solid build",
+    "build:all": "pnpm --filter \"kivex-*\" build"
   },
   "repository": {
     "type": "git",
@@ -21,12 +33,25 @@
   },
   "homepage": "https://github.com/MotionMind2007/Kivex#readme",
   "devDependencies": {
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.6",
     "prettier": "^3.9.4",
     "svgo": "^4.0.1",
     "svgson": "^5.3.1",
     "tsup": "^8.5.1",
-    "tsx": "^4.23.0"
+    "tsx": "^4.23.0",
+    "typescript": "^5.7.3",
+    "vite": "^8.1.4",
+    "vite-plugin-dts": "^5.0.3",
+    "vite-plugin-solid": "^2.11.12"
+  },
+  "dependencies": {
+    "levelojs": "^2.0.1"
   }
 }

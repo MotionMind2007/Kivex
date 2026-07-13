@@ -1,11 +1,16 @@
 {
   "name": "kivex-solid",
-  "version": "1.0.0",
-  "description": "SolidJS wrapper for Kivex icons",
+  "version": "1.2.0",
+  "description": "The official Solid component library for Kivex Icons.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -13,31 +18,43 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": [
-    "dist"
-  ],
+  "sideEffects": false,
   "scripts": {
     "build": "vite build",
     "dev": "vite build --watch",
     "generate": "tsx scripts/build.ts",
     "watch": "tsx scripts/watch.ts",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "pnpm run generate && pnpm run build"
   },
+  "keywords": [
+    "motion-icons",
+    "SolidJs",
+    "kivex",
+    "kivex-icons",
+    "kivex-solid",
+    "open-source",
+    "icon-library",
+    "dynamic-icons",
+    "icon",
+    "ui"
+  ],
   "peerDependencies": {
     "solid-js": "^1.9.0"
   },
+  "author": "MotionMind2007",
+  "license": "MIT",
   "devDependencies": {
-    "@svgr/core": "^8.1.0",
-    "@svgr/plugin-jsx": "^8.1.0",
-    "chokidar": "^5.0.0",
-    "esbuild-plugin-solid": "^0.6.0",
-    "fast-glob": "^3.3.3",
-    "fs-extra": "^11.3.6",
-    "solid-js": "^1.9.0",
-    "tsx": "^4.23.0",
-    "typescript": "^5.4.5",
-    "vite": "^8.1.4",
-    "vite-plugin-dts": "^5.0.3",
-    "vite-plugin-solid": "^2.11.12"
-  }
+    "svgson": "^5.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MotionMind2007/Kivex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MotionMind2007/Kivex/issues"
+  },
+  "homepage": "https://github.com/MotionMind2007/Kivex#readme"
 }

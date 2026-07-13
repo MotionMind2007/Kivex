@@ -1,8 +1,12 @@
 import path from 'path';
 import fg from 'fast-glob';
 import fs from 'fs-extra';
+import { fileURLToPath } from 'url';
 import { transform } from '@svgr/core';
 import { generateIconCode } from './IconTemplate';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // shared utilities
 

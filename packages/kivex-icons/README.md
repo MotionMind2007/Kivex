@@ -47,7 +47,7 @@ bun add kivex-icons
 ```
 
 ## Usage
-### Kivex Icons v1.1.0 provides multiple professional ways to inject icons into your application depending on your use case.
+### Kivex Icons [![npm](https://img.shields.io/npm/v/kivex-icons?color=blue)](https://www.npmjs.com/package/kivex-icons) provides multiple professional ways to inject icons into your application depending on your use case.
 
 1. Direct Icon Import (Recommended for Bundlers)
 You can import individual icons directly. Each icon is exposed as a structured object ready to be parsed.
@@ -104,6 +104,9 @@ If you prefer not to use a package manager, you can include Kivex Icons directly
 
 ### License
 This project is licensed under the MIT License. You are free to use, modify, and distribute this library for any project, including commercial applications.
+
+## Documentation
+For full documentation, architecture design, and core guidelines, please visit our main repository at [Kivex System Root](https://github.com/motionmind2007/kivex).
 
 ## Contribution
 Feel free to open issues or contribute to the library! Check out our GitHub repository.
