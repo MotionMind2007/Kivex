@@ -1,0 +1,46 @@
+{
+  "name": "kivex-svelte",
+  "version": "1.0.0",
+  "description": "Svelte wrapper for Kivex icons",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+ "scripts": {
+  "build": "svelte-package --input src",
+  "dev": "svelte-package --watch",
+  "generate": "tsx scripts/build.ts",
+  "watch": "tsx scripts/watch.ts",
+  "prepublishOnly": "npm run build"
+},
+  "peerDependencies": {
+    "svelte": "^5.56.4"
+  },
+  "devDependencies": {
+    "@sveltejs/package": "^2.3.7",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@tsconfig/svelte": "^5.0.8",
+    "chokidar": "^5.0.0",
+    "fast-glob": "^3.3.3",
+    "fs-extra": "^11.3.6",
+    "svelte": "^5.56.4",
+    "svelte-preprocess": "^5.1.4",
+    "tsx": "^4.23.0",
+    "typescript": "^5.4.5",
+    "vite": "^8.1.4",
+    "vite-plugin-dts": "^5.0.3"
+  }
+}
