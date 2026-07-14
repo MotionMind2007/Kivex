@@ -8,8 +8,8 @@ export const Calendar = forwardRef<SVGSVGElement, IconProps>(
   
         size = 24, 
         color = 'currentColor', 
-        strokeWidth = 2 
-        
+        strokeWidth = 2,
+        ...props
         },
         ref
   ) => {
@@ -19,6 +19,7 @@ export const Calendar = forwardRef<SVGSVGElement, IconProps>(
         size={size}
         color={color}
         strokeWidth={strokeWidth}
+        {...props}
       >
         <rect width={18} height={18} x={3} y={4} rx={2} /><path d="M8 2v4" /><path d="M16 2v4" /><path d="M3 10h18" />
       </IconBase>

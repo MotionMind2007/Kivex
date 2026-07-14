@@ -8,8 +8,8 @@ export const ListChevronsUpDown = forwardRef<SVGSVGElement, IconProps>(
   
         size = 24, 
         color = 'currentColor', 
-        strokeWidth = 2 
-        
+        strokeWidth = 2,
+        ...props
         },
         ref
   ) => {
@@ -19,6 +19,7 @@ export const ListChevronsUpDown = forwardRef<SVGSVGElement, IconProps>(
         size={size}
         color={color}
         strokeWidth={strokeWidth}
+        {...props}
       >
         <path d="m14 8 3.253-2.908a.38.38 0 0 1 .494 0L21 8" /><path d="m14 16 3.253 2.908a.38.38 0 0 0 .494 0L21 16" /><path d="M3 5h7" /><path d="M3 12h7" /><path d="M3 19h7" />
       </IconBase>
