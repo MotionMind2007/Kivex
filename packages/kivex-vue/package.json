@@ -1,0 +1,22 @@
+{
+  "name": "kivex-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "tsx scripts/build.ts",
+    "build": "tsup && vue-tsc --project tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "esbuild-plugin-vue": "^0.2.4",
+    "vue": "^3.5.39",
+    "vue-tsc": "^3.3.7"
+  },
+  "dependencies": {
+    "unplugin-vue": "^7.2.0"
+  }
+}
