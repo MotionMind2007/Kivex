@@ -8,8 +8,8 @@ export const CircleChevronDown = forwardRef<SVGSVGElement, IconProps>(
   
         size = 24, 
         color = 'currentColor', 
-        strokeWidth = 2 
-        
+        strokeWidth = 2,
+        ...props
         },
         ref
   ) => {
@@ -19,6 +19,7 @@ export const CircleChevronDown = forwardRef<SVGSVGElement, IconProps>(
         size={size}
         color={color}
         strokeWidth={strokeWidth}
+        {...props}
       >
         <path d="m8 10 3.764 3.899c.13.135.341.135.472 0L16 10" /><circle cx={12} cy={12} r={10} />
       </IconBase>

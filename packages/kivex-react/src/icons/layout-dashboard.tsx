@@ -8,8 +8,8 @@ export const LayoutDashboard = forwardRef<SVGSVGElement, IconProps>(
   
         size = 24, 
         color = 'currentColor', 
-        strokeWidth = 2 
-        
+        strokeWidth = 2,
+        ...props
         },
         ref
   ) => {
@@ -19,6 +19,7 @@ export const LayoutDashboard = forwardRef<SVGSVGElement, IconProps>(
         size={size}
         color={color}
         strokeWidth={strokeWidth}
+        {...props}
       >
         <rect width={7} height={9} x={3} y={3} rx={0.5} /><rect width={7} height={9} x={14} y={12} rx={0.5} /><rect width={7} height={5} x={3} y={16} rx={0.5} /><rect width={7} height={5} x={14} y={3} rx={0.5} />
       </IconBase>

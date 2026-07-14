@@ -8,8 +8,8 @@ export const ArrowRightToLine = forwardRef<SVGSVGElement, IconProps>(
   
         size = 24, 
         color = 'currentColor', 
-        strokeWidth = 2 
-        
+        strokeWidth = 2,
+        ...props
         },
         ref
   ) => {
@@ -19,6 +19,7 @@ export const ArrowRightToLine = forwardRef<SVGSVGElement, IconProps>(
         size={size}
         color={color}
         strokeWidth={strokeWidth}
+        {...props}
       >
         <path d="M3 12.051h12" /><path d="M21 5v14" /><path d="m11 6 5.646 5.646a.5.5 0 0 1 0 .708L11 18" />
       </IconBase>

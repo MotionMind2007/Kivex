@@ -8,8 +8,8 @@ export const MenuVertical = forwardRef<SVGSVGElement, IconProps>(
   
         size = 24, 
         color = 'currentColor', 
-        strokeWidth = 2 
-        
+        strokeWidth = 2,
+        ...props
         },
         ref
   ) => {
@@ -19,6 +19,7 @@ export const MenuVertical = forwardRef<SVGSVGElement, IconProps>(
         size={size}
         color={color}
         strokeWidth={strokeWidth}
+        {...props}
       >
         <rect width={2} height={2} x={11} y={4} rx={1} /><rect width={2} height={2} x={11} y={11} rx={1} /><rect width={2} height={2} x={11} y={18} rx={1} />
       </IconBase>

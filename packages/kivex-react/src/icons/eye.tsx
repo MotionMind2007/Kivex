@@ -8,8 +8,8 @@ export const Eye = forwardRef<SVGSVGElement, IconProps>(
   
         size = 24, 
         color = 'currentColor', 
-        strokeWidth = 2 
-        
+        strokeWidth = 2,
+        ...props
         },
         ref
   ) => {
@@ -19,6 +19,7 @@ export const Eye = forwardRef<SVGSVGElement, IconProps>(
         size={size}
         color={color}
         strokeWidth={strokeWidth}
+        {...props}
       >
         <circle cx={12} cy={12} r={3} /><path d="M2 12C5 6.718 13.2-.678 22 12" /><path d="M22.008 12.023c-3 5.282-11.2 12.678-20 0" />
       </IconBase>
