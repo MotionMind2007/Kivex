@@ -8,8 +8,8 @@ export const Grid2x2 = forwardRef<SVGSVGElement, IconProps>(
   
         size = 24, 
         color = 'currentColor', 
-        strokeWidth = 2 
-        
+        strokeWidth = 2,
+        ...props
         },
         ref
   ) => {
@@ -19,6 +19,7 @@ export const Grid2x2 = forwardRef<SVGSVGElement, IconProps>(
         size={size}
         color={color}
         strokeWidth={strokeWidth}
+        {...props}
       >
         <rect width={18} height={18} x={3} y={3} rx={1} /><path d="M3 12h18" /><path d="M12 3v18" />
       </IconBase>

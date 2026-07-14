@@ -12,7 +12,8 @@ export const IconBase = forwardRef<SVGSVGElement, IconBaseProps>(
             size = 24, 
             color = 'currentColor', 
             strokeWidth = 2, 
-            children 
+            children,
+            ...props
         }, 
         ref
     ) => {
@@ -28,6 +29,7 @@ export const IconBase = forwardRef<SVGSVGElement, IconBaseProps>(
             strokeWidth={strokeWidth}
             strokeLinecap='round'
             strokeLinejoin='round'
+            {...props}
         >
             {children}
         </svg>

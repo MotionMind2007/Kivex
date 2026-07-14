@@ -8,8 +8,8 @@ export const UserCheck = forwardRef<SVGSVGElement, IconProps>(
   
         size = 24, 
         color = 'currentColor', 
-        strokeWidth = 2 
-        
+        strokeWidth = 2,
+        ...props
         },
         ref
   ) => {
@@ -19,6 +19,7 @@ export const UserCheck = forwardRef<SVGSVGElement, IconProps>(
         size={size}
         color={color}
         strokeWidth={strokeWidth}
+        {...props}
       >
         <circle cx={10} cy={8} r={5} /><path d="M15 14.755A8 8 0 0 0 2 21" /><path d="m16 19.333 1.608 1.34a.5.5 0 0 0 .71-.071L22 16" />
       </IconBase>

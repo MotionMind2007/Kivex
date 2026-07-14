@@ -8,8 +8,8 @@ export const Plus = forwardRef<SVGSVGElement, IconProps>(
   
         size = 24, 
         color = 'currentColor', 
-        strokeWidth = 2 
-        
+        strokeWidth = 2,
+        ...props
         },
         ref
   ) => {
@@ -19,6 +19,7 @@ export const Plus = forwardRef<SVGSVGElement, IconProps>(
         size={size}
         color={color}
         strokeWidth={strokeWidth}
+        {...props}
       >
         <path d="M12 5v14" /><path d="M5 12h14" />
       </IconBase>
