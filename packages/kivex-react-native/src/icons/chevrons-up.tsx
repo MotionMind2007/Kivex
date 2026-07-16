@@ -1,8 +1,9 @@
 import { forwardRef } from 'react';
+import Svg, { Path } from 'react-native-svg';
 import { IconBase } from '../components/IconBase';
 import type { IconProps } from '../types/IconProps';
 
-export const ChevronsUp = forwardRef<SVGSVGElement, IconProps>(
+export const ChevronsUp = forwardRef<Svg, IconProps>(
   (
     { 
   
@@ -21,7 +22,7 @@ export const ChevronsUp = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <path d="m7 11 4.646-4.646a.5.5 0 0 1 .708 0L17 11" /><path d="m7 18 4.646-4.646a.5.5 0 0 1 .708 0L17 18" />
+        <Path d="m7 11 4.65-4.65a.5.5 0 0 1 .7 0L17 11" /><Path d="m7 18 4.65-4.65a.5.5 0 0 1 .7 0L17 18" />
       </IconBase>
     );
   }

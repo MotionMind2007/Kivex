@@ -1,8 +1,9 @@
 import { forwardRef } from 'react';
+import Svg, { Circle, Path } from 'react-native-svg';
 import { IconBase } from '../components/IconBase';
 import type { IconProps } from '../types/IconProps';
 
-export const Alert = forwardRef<SVGSVGElement, IconProps>(
+export const Alert = forwardRef<Svg, IconProps>(
   (
     { 
   
@@ -21,7 +22,7 @@ export const Alert = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <circle cx={12} cy={12} r={10} /><path d="M12 8v5" /><circle cx={12} cy={16} r={0.5} />
+        <Circle cx={12} cy={12} r={10} /><Path d="M12 8v4" /><Circle cx={12} cy={16} r={0.5} />
       </IconBase>
     );
   }

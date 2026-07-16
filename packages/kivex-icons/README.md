@@ -88,10 +88,10 @@ const menuString = getKivexIconString(Menu, { size: 24, color: 'currentColor' })
 If you prefer not to use a package manager, you can include Kivex Icons directly in your HTML:
 ```html
 <div id="icon-container"></div>
-<i data-kivex="home" data-size="40" color="red"></i>
+<i data-kivex="home" data-size="40" data-color="red"></i>
 
 <script type="module">
-    import { buildKivexIcon, replaceKivexIcons, Home } from 'https://cdn.jsdelivr.net/npm/kivex-icons/dist/index.mjs';
+    import { buildKivexIcon, replaceKivexIcons, Home } from 'https://cdn.jsdelivr.net/npm/kivex-icons/dist/index.js';
 
     // Method 1: Append Child
     const homeIcon = buildKivexIcon(Home, { size: 32 });

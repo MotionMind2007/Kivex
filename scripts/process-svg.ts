@@ -31,6 +31,9 @@ async function optimizeSvg(svgContent:string, filePath:string) {
                     overrides: {
                         convertShapeToPath: false,
                         mergePaths: false,
+                        cleanupNumericValues: { floatPrecision: 2 },
+                        convertPathData: { floatPrecision: 2 },
+                        convertTransform: { floatPrecision: 2 }
                     },
                 },
             },

@@ -1,8 +1,9 @@
 import { forwardRef } from 'react';
+import Svg, { Path } from 'react-native-svg';
 import { IconBase } from '../components/IconBase';
 import type { IconProps } from '../types/IconProps';
 
-export const ExternalLink = forwardRef<SVGSVGElement, IconProps>(
+export const ExternalLink = forwardRef<Svg, IconProps>(
   (
     { 
   
@@ -21,7 +22,7 @@ export const ExternalLink = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <path d="M18 13v7.583c0 .23-.187.417-.417.417H3.417A.417.417 0 0 1 3 20.583V6.417c0-.23.187-.417.417-.417H11" /><path d="M15 3h5.5a.5.5 0 0 1 .5.5V9" /><path d="M10 14 20 4" />
+        <Path d="M18 13v7.58c0 .23-.19.42-.42.42H3.42a.4.4 0 0 1-.42-.42V6.42c0-.23.19-.42.42-.42H11" /><Path d="M15 3h5.5a.5.5 0 0 1 .5.5V9" /><Path d="M10 14 20 4" />
       </IconBase>
     );
   }

@@ -1,8 +1,9 @@
 import { forwardRef } from 'react';
+import Svg, { Path } from 'react-native-svg';
 import { IconBase } from '../components/IconBase';
 import type { IconProps } from '../types/IconProps';
 
-export const ColumnChartPlainIncreasing = forwardRef<SVGSVGElement, IconProps>(
+export const ColumnChartPlainIncreasing = forwardRef<Svg, IconProps>(
   (
     { 
   
@@ -21,7 +22,7 @@ export const ColumnChartPlainIncreasing = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <path d="M5 21v-6" /><path d="M19 3v18" /><path d="M12 21V9" />
+        <Path d="M5 21v-6" /><Path d="M19 3v18" /><Path d="M12 21V9" />
       </IconBase>
     );
   }

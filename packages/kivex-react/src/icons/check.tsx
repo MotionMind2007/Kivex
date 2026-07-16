@@ -21,7 +21,7 @@ export const Check = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <path d="m4 13 8.07 5.675a.5.5 0 0 0 .73-.174L20 5" />
+        <path d="m4 13 8.07 5.68a.5.5 0 0 0 .73-.18L20 5" />
       </IconBase>
     );
   }

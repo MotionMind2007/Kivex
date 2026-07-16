@@ -21,7 +21,7 @@ export const Users = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <circle cx={10} cy={8} r={5} /><path d="M18 21a8 8 0 1 0-16 0" /><path d="M18 4c.833 1.333 2 4.9 0 8.5" /><path d="M18 12.5c1.5 1.333 4.4 4.9 4 8.5" />
+        <circle cx={10} cy={8} r={5} /><path d="M18 21a8 8 0 1 0-16 0" /><path d="M18 4c.83 1.33 2 4.9 0 8.5" /><path d="M18 12.5c1.5 1.33 4.4 4.9 4 8.5" />
       </IconBase>
     );
   }

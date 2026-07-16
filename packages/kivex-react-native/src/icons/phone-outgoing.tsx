@@ -1,8 +1,9 @@
 import { forwardRef } from 'react';
+import Svg, { Path } from 'react-native-svg';
 import { IconBase } from '../components/IconBase';
 import type { IconProps } from '../types/IconProps';
 
-export const PhoneOutgoing = forwardRef<SVGSVGElement, IconProps>(
+export const PhoneOutgoing = forwardRef<Svg, IconProps>(
   (
     { 
   
@@ -21,7 +22,7 @@ export const PhoneOutgoing = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <path d="M7.362 2h-4.23a.966.966 0 0 0-.964.819c-1.062 7.066 2.651 17.334 18.73 19.175.587.067 1.102-.408 1.102-1.012v-5.153c0-.533-.398-.978-.918-1.027l-4.306-.4a1 1 0 0 0-.61.143l-2.154 1.32a.18.18 0 0 1-.18.007 18.8 18.8 0 0 1-6.593-5.62L6.95 9.86a.215.215 0 0 1 0-.254l1.219-1.66c.131-.179.202-.396.202-.62V3.032A1.02 1.02 0 0 0 7.362 2Z" /><path d="M22 8V3a1 1 0 0 0-1-1h-5" /><path d="m21 3-5 5" />
+        <Path d="M7.36 2H3.13a1 1 0 0 0-.96.82C1.1 9.89 4.82 20.15 20.9 21.99a1 1 0 0 0 1.1-1v-5.16c0-.53-.4-.98-.92-1.03l-4.3-.4a1 1 0 0 0-.61.15L14 15.87a.2.2 0 0 1-.18 0 19 19 0 0 1-6.6-5.62l-.28-.39a.2.2 0 0 1 0-.25l1.22-1.66q.2-.28.2-.62v-4.3a1 1 0 0 0-1-1.03" /><Path d="M22 8V3a1 1 0 0 0-1-1h-5" /><Path d="m21 3-5 5" />
       </IconBase>
     );
   }

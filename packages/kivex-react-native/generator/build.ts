@@ -8,6 +8,10 @@ import { generateIconCode } from './IconTemplate';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+function toPascalCase(tag: string): string {
+  return tag[0].toUpperCase() + tag.slice(1);
+}
+
 export async function writeFileIfChanged(
   filePath: string,
   newContent: string,
@@ -78,7 +82,17 @@ export async function generateIcons(options?: { force?: boolean }): Promise<void
     );
 
     const childrenJsx = extractSvgChildren(svgrResult);
-    const finalCode = generateIconCode(childrenJsx, componentName);
+    const nativeChildrenJsx = childrenJsx.replace(
+      /<\/?([a-z][a-zA-Z0-9]*)\b/g,
+      (match, tag) => match.replace(tag, toPascalCase(tag))
+    );
+    const usedTagsSet = new Set<string>();
+    const tagMatches = childrenJsx.matchAll(/<([a-z][a-zA-Z0-9]*)\b/g);
+    for (const match of tagMatches) {
+      usedTagsSet.add(toPascalCase(match[1]));
+    
+    const usedTags = Array.from(usedTagsSet);}
+    const finalCode = generateIconCode(nativeChildrenJsx, componentName, Array.from(usedTagsSet));
 
     const outputFile = path.join(OUTPUT_DIRECTORY, `${fileName}.tsx`);
     const written = await writeFileIfChanged(outputFile, finalCode, force);

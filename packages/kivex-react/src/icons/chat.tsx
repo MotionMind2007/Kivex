@@ -21,7 +21,7 @@ export const Chat = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v9.304a2 2 0 0 1-2 2H7.659a2 2 0 0 0-1.189.392l-3.673 2.715A.5.5 0 0 1 2 20.009z" /><path d="M6 8h11" /><path d="M6 13h9" />
+        <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v9.3a2 2 0 0 1-2 2H7.66a2 2 0 0 0-1.19.4L2.8 20.4A.5.5 0 0 1 2 20z" /><path d="M6 8h11" /><path d="M6 13h9" />
       </IconBase>
     );
   }

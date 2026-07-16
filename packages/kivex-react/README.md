@@ -59,7 +59,7 @@ function App() {
       <Search color="#3b82f6" size={32} strokeWidth={2.5}/>
       
       {/* Target custom CSS classes */}
-      <Settings className="icon-spin" size={24}/>
+      <Settings className="settings-icon" size={24}/>
     </div>
   );
 }

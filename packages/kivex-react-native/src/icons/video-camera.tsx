@@ -1,8 +1,9 @@
 import { forwardRef } from 'react';
+import Svg, { Path, Circle } from 'react-native-svg';
 import { IconBase } from '../components/IconBase';
 import type { IconProps } from '../types/IconProps';
 
-export const VideoCamera = forwardRef<SVGSVGElement, IconProps>(
+export const VideoCamera = forwardRef<Svg, IconProps>(
   (
     { 
   
@@ -21,7 +22,7 @@ export const VideoCamera = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <path d="M14.214 7H4.786C4.352 7 4 7.336 4 7.75v7.5c0 .414.352.75.786.75h9.428c.434 0 .786-.336.786-.75v-7.5c0-.414-.352-.75-.786-.75Z" /><path d="m15 12.105 3.704 1.792c.554.268 1.296-.02 1.296-.503V9.606c0-.483-.742-.771-1.296-.503L15 10.895" /><path d="m7 21 2.143-3.57a1 1 0 0 1 1.714 0L13 21" /><circle cx={6.5} cy={3.5} r={1.5} /><circle cx={11.5} cy={3.5} r={1.5} />
+        <Path d="M14.21 7H4.8a.77.77 0 0 0-.79.75v7.5c0 .41.35.75.79.75h9.42c.44 0 .79-.34.79-.75v-7.5a.77.77 0 0 0-.79-.75" /><Path d="m15 12.1 3.7 1.8c.56.26 1.3-.02 1.3-.5V9.6c0-.48-.74-.76-1.3-.5L15 10.9" /><Path d="m7 21 2.14-3.57a1 1 0 0 1 1.72 0L13 21" /><Circle cx={6.5} cy={3.5} r={1.5} /><Circle cx={11.5} cy={3.5} r={1.5} />
       </IconBase>
     );
   }

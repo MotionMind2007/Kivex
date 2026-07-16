@@ -21,7 +21,7 @@ export const Alert = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <circle cx={12} cy={12} r={10} /><path d="M12 8v5" /><circle cx={12} cy={16} r={0.5} />
+        <circle cx={12} cy={12} r={10} /><path d="M12 8v4" /><circle cx={12} cy={16} r={0.5} />
       </IconBase>
     );
   }

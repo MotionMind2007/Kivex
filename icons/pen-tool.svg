@@ -1,0 +1,23 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10.73 16.34 6.1 14.33a1 1 0 0 1-.57-.68L2.8 2.85l.02-.02 10.82 2.68a1 1 0 0 1 .67.56l2.07 4.6" />
+  <rect
+    width="10"
+    height="4"
+    x="10.66"
+    y="17.68"
+    rx="1"
+    transform="rotate(-45.78 10.66 17.68)"
+  />
+  <path d="m3.53 3.53 4.5 4.5" />
+  <circle cx="8.53" cy="8.53" r=".5" />
+</svg>

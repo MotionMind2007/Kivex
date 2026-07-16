@@ -1,8 +1,9 @@
 import { forwardRef } from 'react';
+import Svg, { Rect, Path } from 'react-native-svg';
 import { IconBase } from '../components/IconBase';
 import type { IconProps } from '../types/IconProps';
 
-export const Grid2x2 = forwardRef<SVGSVGElement, IconProps>(
+export const Grid2x2 = forwardRef<Svg, IconProps>(
   (
     { 
   
@@ -21,7 +22,7 @@ export const Grid2x2 = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <rect width={18} height={18} x={3} y={3} rx={1} /><path d="M3 12h18" /><path d="M12 3v18" />
+        <Rect width={18} height={18} x={3} y={3} rx={1} /><Path d="M3 12h18" /><Path d="M12 3v18" />
       </IconBase>
     );
   }

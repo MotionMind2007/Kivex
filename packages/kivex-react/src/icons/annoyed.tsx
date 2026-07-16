@@ -21,7 +21,7 @@ export const Annoyed = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z" /><path d="M8 15h8" /><path d="M8 9h2" /><path d="M14 9h2" />
+        <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20" /><path d="M8 15h8" /><path d="M8 9h2" /><path d="M14 9h2" />
       </IconBase>
     );
   }

@@ -21,7 +21,7 @@ export const Search = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <circle cx={11} cy={11} r={8} /><path d="M16.947 17.054 21 21" />
+        <circle cx={11} cy={11} r={8} /><path d="M16.95 17.05 21 21" />
       </IconBase>
     );
   }

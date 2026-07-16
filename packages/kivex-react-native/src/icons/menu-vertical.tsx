@@ -1,8 +1,9 @@
 import { forwardRef } from 'react';
+import Svg, { Rect } from 'react-native-svg';
 import { IconBase } from '../components/IconBase';
 import type { IconProps } from '../types/IconProps';
 
-export const MenuVertical = forwardRef<SVGSVGElement, IconProps>(
+export const MenuVertical = forwardRef<Svg, IconProps>(
   (
     { 
   
@@ -21,7 +22,7 @@ export const MenuVertical = forwardRef<SVGSVGElement, IconProps>(
         strokeWidth={strokeWidth}
         {...props}
       >
-        <rect width={2} height={2} x={11} y={4} rx={1} /><rect width={2} height={2} x={11} y={11} rx={1} /><rect width={2} height={2} x={11} y={18} rx={1} />
+        <Rect width={2} height={2} x={11} y={4} rx={1} /><Rect width={2} height={2} x={11} y={11} rx={1} /><Rect width={2} height={2} x={11} y={18} rx={1} />
       </IconBase>
     );
   }

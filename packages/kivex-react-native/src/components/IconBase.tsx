@@ -1,12 +1,13 @@
 import { ReactNode } from 'react';
 import { forwardRef } from 'react';
 import type { IconProps } from '../types/IconProps';
+import Svg from 'react-native-svg';
 
 interface IconBaseProps extends IconProps {
     children: ReactNode;
 }
 
-export const IconBase = forwardRef<SVGSVGElement, IconBaseProps>(
+export const IconBase = forwardRef<Svg, IconBaseProps>(
     (
         { 
             size = 24, 
@@ -18,7 +19,7 @@ export const IconBase = forwardRef<SVGSVGElement, IconBaseProps>(
         ref
     ) => {
     return (
-        <svg 
+        <Svg 
             ref={ref}
             xmlns="http://www.w3.org/2000/svg"
             width={size}
@@ -27,12 +28,12 @@ export const IconBase = forwardRef<SVGSVGElement, IconBaseProps>(
             fill="none"
             stroke={color}
             strokeWidth={strokeWidth}
-            strokeLinecap='round'
+            strokeLinecap="round"
             strokeLinejoin='round'
-            {...props}
+            {...(props as any)}
         >
             {children}
-        </svg>
+        </Svg>
     )});
 
 IconBase.displayName = 'IconBase';

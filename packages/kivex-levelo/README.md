@@ -57,10 +57,10 @@ function Mind() {
       <Home/>
 
       {/* Styled with custom size and dynamic theme colors */}
-      <Search color="#5b4fff" size="{48}" strokeWidth="{2.5}"/>
+      <Search color="#5b4fff" size={48} strokeWidth={2.5}/>
       
       {/* Custom styles and extra configurations */}
-      <Chat color="#7c3aed" size="{32}" style="border: 1px solid #000;"/>
+      <Chat color="#7c3aed" size={32} style="border: 1px solid #000;"/>
     </div>
   );
 }

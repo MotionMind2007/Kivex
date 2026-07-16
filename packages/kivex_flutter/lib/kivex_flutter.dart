@@ -49,7 +49,6 @@ export 'icons/grid-2x2.dart';
 export 'icons/grid-3x3.dart';
 export 'icons/heart.dart';
 export 'icons/home.dart';
-export 'icons/house-antenna.dart';
 export 'icons/laugh.dart';
 export 'icons/layout-dashboard.dart';
 export 'icons/layout-grid.dart';

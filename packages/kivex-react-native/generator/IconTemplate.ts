@@ -1,9 +1,11 @@
-export function generateIconCode(svgChildren: string, componentName: string): string {
+export function generateIconCode(svgChildren: string, componentName: string, usedTags: string[]): string {
+  const svgImports = [...usedTags].join(', ');
   return `import { forwardRef } from 'react';
+import Svg, { ${svgImports} } from 'react-native-svg';
 import { IconBase } from '../components/IconBase';
 import type { IconProps } from '../types/IconProps';
 
-export const ${componentName} = forwardRef<SVGSVGElement, IconProps>(
+export const ${componentName} = forwardRef<Svg, IconProps>(
   (
     { 
   

@@ -54,13 +54,13 @@ function App() {
   return (
     <div>
       {/* Default render */}
-      <Home/>
+      <Home />
 
       {/* Styled with reactive props */}
-      <Search color="#3b82f6" size="{32}" strokeWidth="{2.5}"/>
+      <Search color="#3b82f6" size={32} stroke-width={2.5} />
       
-      {/* Target custom CSS classes or SolidJS classlists */}
-      <Settings class="icon-spin" size="{24}"/>
+      {/* Target custom CSS classes */}
+      <Settings class="icon-spin" size={24} />
     </div>
   );
 }
