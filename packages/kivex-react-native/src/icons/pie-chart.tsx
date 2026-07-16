@@ -1,0 +1,30 @@
+import { forwardRef } from 'react';
+import { IconBase } from '../components/IconBase';
+import type { IconProps } from '../types/IconProps';
+
+export const PieChart = forwardRef<SVGSVGElement, IconProps>(
+  (
+    { 
+  
+        size = 24, 
+        color = 'currentColor', 
+        strokeWidth = 2,
+        ...props
+        },
+        ref
+  ) => {
+    return (
+      <IconBase
+        ref={ref}
+        size={size}
+        color={color}
+        strokeWidth={strokeWidth}
+        {...props}
+      >
+        <path d="M21.996 13.107Q22 12.954 22 12.8C22 6.835 17.165 2 11.2 2q-.154 0-.307.004c-.51.014-.893.448-.893.957V13a1 1 0 0 0 1 1h10.039c.51 0 .942-.384.957-.893Z" /><path d="M20 17.632A9.82 9.82 0 0 1 11.827 22C6.4 22 2 17.6 2 12.173A9.82 9.82 0 0 1 6.368 4" />
+      </IconBase>
+    );
+  }
+);
+
+PieChart.displayName = 'PieChart';
