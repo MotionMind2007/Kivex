@@ -4,11 +4,11 @@
 
 # Kivex Icons
 
-Kivex(Kinetic Vector Exchange) Icons is an open-source icon library that provides lightweight, pixel-perfect, and dynamic SVG icons for modern web applications.
+Kivex (Kinetic Vector Exchange) Icons is a powerful, open-source **Multi-platform** icon library. It provides a production-ready ecosystem of **200+ lightweight, pixel-perfect, and dynamic SVG icons** engineered to work seamlessly across modern **Web, Mobile, and Desktop** frameworks.
 
 ## Packages
 
-| Package | Version | Manger Link | LibPilot link |
+| Package | Version | Package Manager | LibPilot link |
 | ------- | ------- | ----- | ----- |
 | **Kivex-icons** (Core JS) | [![npm](https://img.shields.io/npm/v/kivex-icons?color=blue)](https://npmjs.com/package/kivex-icons) | [NPM](https://npmjs.com/package/kivex-icons) | [LibPlot](https://libpilot.motionmind.me/package/kivex-icons) |
 | kivex-react | [![npm](https://img.shields.io/npm/v/kivex-react?color=blue)](https://npmjs.com/package/kivex-react) | [NPM](https://npmjs.com/package/kivex-react) | [LibPilot](https://libpilot.motionmind.me/package/kivex-react) |
